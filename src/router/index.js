@@ -4,6 +4,7 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Test from '../components/Test.vue'
 import Dashboard from '../components/Dashboard.vue'
+import Channel from '../components/Channel.vue'
 
 Vue.use(VueRouter)
 
@@ -17,7 +18,14 @@ const routes = [{path:'/',redirect:'/dashboard'},
     path:'/home',
     component:Home,
     children:[
-      
+      {
+        path:'/dashboard',
+        component:Dashboard
+      },
+      {
+        path:'/channel',
+        component:Channel
+      }
 
     ]
   },
@@ -25,10 +33,7 @@ const routes = [{path:'/',redirect:'/dashboard'},
     path:'/test',
     component:Test
   },
-  {
-    path:'/dashboard',
-    component:Dashboard
-  }
+  
 
 ]
 

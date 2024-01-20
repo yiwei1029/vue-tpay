@@ -31,7 +31,7 @@ export default {
         return {
             MenuList: [
                 { name: 'Dashboard', id: '1', path: 'dashboard', children: [] },
-                { name: 'Request', id: '2', path: 'request', children: [{ name: 'Directory', id: '2-1', path: 'directory' }] },
+                { name: 'Channel', id: '2', path: 'channel', children: [{ name: 'Directory', id: '2-1', path: 'directory' }] },
                 { name: 'Query Data', id: '3', path: 'query', children: [{ name: 'Dashboard', id: '3-1', path: 'dashboard' }] }
             ],
 
