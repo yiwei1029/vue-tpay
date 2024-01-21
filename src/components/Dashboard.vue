@@ -88,9 +88,9 @@ export default {
                 { title: "Transaction Amount", value: 1572 }
             ],
             LatestTrx: [
-                { time: "18:46:05", txhash: "a" },
-                { time: "18:46:05", txhash: "b" },
-                { time: "18:46:05", txhash: "c" }
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c" },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c" },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c" }
             ],
             FreeRateDist: [
                 { name: '1-2%', value: 48 },

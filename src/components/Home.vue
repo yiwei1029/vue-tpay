@@ -3,7 +3,7 @@
         <el-header class="el-header">
             <div>
                 <img class="homelogo" src="../assets/homelogo.png" alt="">
-                <span>Cmixing User Center</span>
+                <span>ThriftPay</span>
                 <el-menu :default-active="activePath" router mode="horizontal" active-text-color="#ff73b3"
                     v-for="menu in MenuList">
                     <el-menu-item :index="'/' + menu.path" @click="saveActive('/' + menu.name)">

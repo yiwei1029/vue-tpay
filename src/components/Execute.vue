@@ -67,9 +67,9 @@ export default {
             InputAmount: '',
             InputReceiver: '',
             LatestTrx: [
-                { time: "18:46:05", txhash: "a" },
-                { time: "18:46:05", txhash: "b" },
-                { time: "18:46:05", txhash: "c" }
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." }
             ],
             AmountVolume: {
                 amount: [20, 30, 24, 19, 42, 35], //数量

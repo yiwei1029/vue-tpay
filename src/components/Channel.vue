@@ -5,29 +5,31 @@
                 <!--  左上支付通道-->
                 <el-col :span="16">
                     <el-row :gutter="10">
-                        <el-col :span="10">
+                        <el-col :span="16">
                             <el-select placeholder="choose a channel" style="width: 100%;">
                                 <el-option v-for="ch in Channels" :key="ch" :value="ch">
                                 </el-option>
                             </el-select></el-col>
-                        <el-col :span="6"><el-button type="primary">New</el-button></el-col>
+                        <el-col :span="6"><el-button type="primary" style="width: 100%;">New</el-button></el-col>
                     </el-row>
+                    <br />
                     <!-- 余额比例chart -->
                     <el-row :gutter="10">
-                        <el-col :span="10">
-                            <div id="chart1" style="width:400px;height: 70px;"></div>
+                        <el-col :span="16">
+                            <div id="chart1" style="width:100%;height: 200px;"></div>
                         </el-col>
-                        <el-col :span="6"><el-button type="danger">Close</el-button>
+                        <el-col :span="6"><el-button type="danger" style="width: 100%;">Close</el-button>
                         </el-col>
                     </el-row>
                     <el-row :gutter="10">
-                        <el-col :span="10">Transaction fee: </el-col>
+                        <el-col :span="16">Current transaction fee: </el-col>
                         <el-col :span="6">{{ TxFees }}</el-col>
                     </el-row>
+                    <br/>
                     <!-- 输入手续费 -->
                     <el-row :gutter="10">
-                        <el-col :span="10"><el-input></el-input> </el-col>
-                        <el-col :span="6"><el-button type="primary">Update</el-button></el-col>
+                        <el-col :span="16"><el-input placeholder="Input a transaction fee(%)"></el-input> </el-col>
+                        <el-col :span="6"><el-button type="primary" style="width: 100%;">Update</el-button></el-col>
                     </el-row>
 
                 </el-col>
@@ -48,7 +50,7 @@
 
         <!-- 中间 交易数量和收益折线图 -->
         <el-card>
-            <div id="chart2" style="width: 600px;height: 300px;"></div>
+            <div id="chart2" style="width: 100%;height: 300px;"></div>
         </el-card>
         <!--  统计底部栏-->
         <el-card>
@@ -75,16 +77,16 @@ export default {
     data() {
         return {
             LatestTrx: [
-                { time: "18:46:05", txhash: "a" },
-                { time: "18:46:05", txhash: "b" },
-                { time: "18:46:05", txhash: "c" }
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." }
             ],
             Channels: ['ch1', 'ch2', 'ch3', 'ch4'],
             BalancePct: [
                 { name: 'me', value: 100 },
                 { name: 'counter', value: 200 }
             ],
-            TxFees: 0.10,
+            TxFees: '1%',
             AmountProfit: {
                 amount: [10, 20, 40, 50, 70, 100],
                 profit: [1, 2, 4.8, 5.5, 7.9, 10.5]
@@ -108,14 +110,17 @@ export default {
         createPieChart(divName, dataArray) {
             var chart = echarts.init(document.getElementById(divName));
             var option = {
+                title: {
+                    text: 'BalancePctage'
+                },
                 tooltip: {
                     trigger: 'item',
                     formatter: "{a} <br/>{b}: {c} ({d}%)"
                 },
                 legend: {
-                    orient: 'vertical',
+                    orient: 'horizontal',
                     x: 'left',
-                    left: 0,
+                    left: 150,
                     data: dataArray.map(item => item.name)
                 },
                 series: [
