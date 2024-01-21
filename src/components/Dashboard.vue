@@ -253,7 +253,7 @@ export default {
                         if (params.value.type == "link") {
                             return `balance of A: ${params.value.val[0]},<br/>
                                 balance of B: ${params.value.val[1]},<br/>
-                                transaction hash: ${params.value.hash}`
+                                transaction hash:</br> ${params.value.hash}`
                         } else {
                             return `account of node: ${params.value.account}</br>
                             account balance:${params.value.val}`

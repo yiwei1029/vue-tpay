@@ -51,6 +51,58 @@
                 "type": "node"
             },
             "category": 3
+        },
+        {
+            "id": "5",
+            "name": "Node 5",
+            "symbolSize": 10,
+            "x": -150.76357,
+            "y": 400.29176,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 3
+        },
+        {
+            "id": "6",
+            "name": "Node 6",
+            "symbolSize": 10,
+            "x": -400.76357,
+            "y": 300.29176,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 2
+        },
+        {
+            "id": "7",
+            "name": "Node 7",
+            "symbolSize": 10,
+            "x": -450.76357,
+            "y": 360.29176,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 1
+        },
+        {
+            "id": "8",
+            "name": "Node 8",
+            "symbolSize": 10,
+            "x": -150.76357,
+            "y": 300.29176,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 2
         }
     ],
     "links": [
@@ -104,6 +156,90 @@
         },
         {
             "source": "2",
+            "target": "3",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "7",
+            "target": "8",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "7",
+            "target": "5",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "2",
+            "target": "5",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "8",
+            "target": "4",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "8",
+            "target": "2",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "4",
+            "target": "7",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "6",
             "target": "3",
             "value": {
                 "val": [
