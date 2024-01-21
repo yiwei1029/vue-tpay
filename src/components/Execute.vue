@@ -6,18 +6,18 @@
                 <el-col :span="16">
                     <div class="left-right">
                         <span>Receiver</span>
-                        <el-input style="width: 50%;">
+                        <el-input v-model="InputReceiver" style="width: 50%;">
                         </el-input>
                     </div>
-
+                    <br />
                     <div class="left-right">
                         <span>Amount</span>
-                        <el-input style="width: 50%;"></el-input>
+                        <el-input v-model="InputAmount" style="width: 50%;"></el-input>
                     </div>
                 </el-col>
 
                 <el-col :span="8">
-                    <el-button type="primary" style="width: 100%;">Route</el-button>
+                    <el-button type="primary" style="width: 100%; margin: auto 0;">Route</el-button>
                 </el-col>
             </el-row>
         </el-card>
@@ -26,7 +26,7 @@
         <el-card>
             <el-row :gutter="20">
                 <el-col :span="16">
-                    route
+                    <div id="graph1" style="width: 100%; height: 300px;"></div>
                 </el-col>
 
                 <el-col :span="8">
@@ -64,6 +64,8 @@ export default {
     name: 'Execute',
     data() {
         return {
+            InputAmount: '',
+            InputReceiver: '',
             LatestTrx: [
                 { time: "18:46:05", txhash: "a" },
                 { time: "18:46:05", txhash: "b" },
@@ -79,6 +81,8 @@ export default {
     watch: {},
     mounted() {
         this.createBarChart('chart1')
+        const Json = require('../../static/myRoute')
+        this.createRouteGraph('graph1', Json)
     },
     methods: {
         createBarChart(divName) {
@@ -125,6 +129,58 @@ export default {
             };
 
             myChart.setOption(option);
+        },
+        createRouteGraph(divName, Json) {
+
+            var chartDom = document.getElementById(divName);
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                title: {
+                    text: 'Transfer Route'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: (params) => {
+                        if (params.value.type == "node") {
+                            return `${params.value.account}`
+                        } else {
+                            return `${params.value.val}`
+                        }
+                    }
+                },
+                animationDurationUpdate: 1500,
+                animationEasingUpdate: 'quinticInOut',
+                series: [
+                    {
+                        type: 'graph',
+                        layout: 'none',
+                        symbolSize: 50,
+                        roam: true,
+                        label: {
+                            show: true
+                        },
+                        edgeSymbol: ['circle', 'arrow'],
+                        edgeSymbolSize: [4, 10],
+                        edgeLabel: {
+                            fontSize: 20
+                        },
+                        data: Json.nodes,
+                        // links: [],
+                        links: Json.links,
+                        categories: Json.categories,
+                        lineStyle: {
+                            opacity: 0.9,
+                            width: 2,
+                            curveness: 0
+                        }
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+
         }
     }
 }

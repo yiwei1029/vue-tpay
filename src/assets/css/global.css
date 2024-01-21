@@ -8,3 +8,6 @@ html,body,#app{
 .el-button{
     font-weight: bolder;
 }
+.el-card{
+    margin-bottom: 10px;
+}

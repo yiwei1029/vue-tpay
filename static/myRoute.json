@@ -1,0 +1,83 @@
+{
+    "nodes": [
+        {
+            "id": "1",
+            "name": "Sender",
+            "symbolSize": 30,
+            "x": -200,
+            "y": 200,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 0
+        },
+        {
+            "id": "2",
+            "name": "Receiver",
+            "symbolSize": 30,
+            "x": -200,
+            "y": 300,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 1
+        },
+        {
+            "id": "3",
+            "name": "Middleman",
+            "symbolSize": 30,
+            "x": -100,
+            "y": 250,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 2
+        }
+    ],
+    "links": [
+        {
+            "source": "1",
+            "target": "2",
+            "value": {
+                "val": 4,
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "1",
+            "target": "3",
+            "value": {
+                "val": 3,
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "3",
+            "target": "2",
+            "value": {
+                "val": 3,
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        }
+    ],
+    "categories": [
+        {
+            "name": "A"
+        },
+        {
+            "name": "B"
+        },
+        {
+            "name": "C"
+        }
+    ]
+}
