@@ -10,7 +10,8 @@
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
-            }
+            },
+            "category": 2
         },
         {
             "id": "2",

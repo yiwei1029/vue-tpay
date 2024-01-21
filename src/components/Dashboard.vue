@@ -242,8 +242,11 @@ export default {
 
             myChart.hideLoading();
             option = {
+                title: {
+                    text: 'Transaction Map'
+                },
                 tooltip: {
-                    trigger:'item',
+                    trigger: 'item',
                     formatter: (params) => {
                         // console.log('params', params)
                         console.log('value', params.value.val)
@@ -258,13 +261,13 @@ export default {
 
                     }
                 },
-                legend: [
-                    {
-                        data: Json.categories.map(function (a) {
-                            return a.name;
-                        })
-                    }
-                ],
+                // legend: [
+                //     {
+                //         data: Json.categories.map(function (a) {
+                //             return a.name;
+                //         })
+                //     }
+                // ],
 
 
                 series: [
@@ -276,18 +279,18 @@ export default {
                         links: Json.links,
                         categories: Json.categories,
                         roam: true,
-                        // label: {
-                        //     show: true,
-                        //     position: 'right',
-                        //     formatter: '{b}'
-                        // },
+                        label: {
+                            show: true,
+                            position: 'right',
+                            formatter: '{b}'
+                        },
                         edgeSymbol: ['circle', 'arrow'],
                         edgeSymbolSize: [4, 10],
-                        edgeLabel: {
-                            fontSize: 14,
-                            show: false,
+                        // edgeLabel: {
+                        //     fontSize: 14,
+                        //     show: false,
 
-                        },
+                        // },
                         // labelLayout: {
                         //     hideOverlap: true
                         // },
