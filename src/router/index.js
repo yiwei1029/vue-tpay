@@ -5,6 +5,7 @@ import Home from '../components/Home.vue'
 import Test from '../components/Test.vue'
 import Dashboard from '../components/Dashboard.vue'
 import Channel from '../components/Channel.vue'
+import Execute from '../components/Execute.vue'
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,10 @@ const routes = [{path:'/',redirect:'/dashboard'},
       {
         path:'/channel',
         component:Channel
+      },
+      {
+        path:'/execute',
+        component: Execute
       }
 
     ]

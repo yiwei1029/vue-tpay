@@ -32,7 +32,7 @@ export default {
             MenuList: [
                 { name: 'Dashboard', id: '1', path: 'dashboard', children: [] },
                 { name: 'Channel', id: '2', path: 'channel', children: [{ name: 'Directory', id: '2-1', path: 'directory' }] },
-                { name: 'Query Data', id: '3', path: 'query', children: [{ name: 'Dashboard', id: '3-1', path: 'dashboard' }] }
+                { name: 'Execute', id: '3', path: 'execute', children: [{ name: 'Dashboard', id: '3-1', path: 'dashboard' }] }
             ],
 
             activePath: '',

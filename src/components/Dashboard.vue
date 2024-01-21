@@ -242,7 +242,22 @@ export default {
 
             myChart.hideLoading();
             option = {
-                tooltip: {},
+                tooltip: {
+                    trigger:'item',
+                    formatter: (params) => {
+                        // console.log('params', params)
+                        console.log('value', params.value.val)
+                        if (params.value.type == "link") {
+                            return `balance of A: ${params.value.val[0]},<br/>
+                                balance of B: ${params.value.val[1]},<br/>
+                                transaction hash: ${params.value.hash}`
+                        } else {
+                            return `account of node: ${params.value.account}</br>
+                            account balance:${params.value.val}`
+                        }
+
+                    }
+                },
                 legend: [
                     {
                         data: Json.categories.map(function (a) {
@@ -250,23 +265,32 @@ export default {
                         })
                     }
                 ],
+
+
                 series: [
                     {
-                        name: 'Les Miserables',
+                        name: 'Net',
                         type: 'graph',
                         layout: 'none',
                         data: Json.nodes,
                         links: Json.links,
                         categories: Json.categories,
                         roam: true,
-                        label: {
-                            show: true,
-                            position: 'right',
-                            formatter: '{b}'
+                        // label: {
+                        //     show: true,
+                        //     position: 'right',
+                        //     formatter: '{b}'
+                        // },
+                        edgeSymbol: ['circle', 'arrow'],
+                        edgeSymbolSize: [4, 10],
+                        edgeLabel: {
+                            fontSize: 14,
+                            show: false,
+
                         },
-                        labelLayout: {
-                            hideOverlap: true
-                        },
+                        // labelLayout: {
+                        //     hideOverlap: true
+                        // },
                         scaleLimit: {
                             min: 0.4,
                             max: 2

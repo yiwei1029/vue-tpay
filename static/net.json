@@ -1,45 +1,117 @@
 {
     "nodes": [
         {
-            "id": "0",
-            "name": "Myriel",
+            "id": "1",
+            "name": "Node 1",
             "symbolSize": 19.12381,
             "x": -266.82776,
             "y": 299.6904,
-            "value": 28.685715,
-            "category": 0
-        },
-        {
-            "id": "1",
-            "name": "Napoleon",
-            "symbolSize": 2.6666666666666665,
-            "x": -418.08344,
-            "y": 446.8853,
-            "value": 4,
-            "category": 0
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            }
         },
         {
             "id": "2",
-            "name": "MlleBaptistine",
+            "name": "Node 2",
+            "symbolSize": 4.6666666666666665,
+            "x": -418.08344,
+            "y": 446.8853,
+            "value": {
+                "val": 5.2,
+                "account": "bc1q9hyzumk0kqedzyd6vasgysk4x2al759esvtqfy",
+                "type": "node"
+            },
+            "category": 0
+        },
+        {
+            "id": "3",
+            "name": "Node 3",
             "symbolSize": 6.323809333333333,
             "x": -212.76357,
             "y": 245.29176,
-            "value": 9.485714,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
             "category": 1
+        },
+        {
+            "id": "4",
+            "name": "Node 4",
+            "symbolSize": 20,
+            "x": -270.76357,
+            "y": 400.29176,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 3
         }
     ],
     "links": [
         {
             "source": "1",
-            "target": "0"
+            "target": "2",
+            "value": {
+                "val": [
+                    5.2,
+                    1
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
         },
         {
             "source": "2",
-            "target": "0"
+            "target": "1",
+            "value": {
+                "val": [
+                    1,
+                    5.2
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
         },
         {
             "source": "3",
-            "target": "0"
+            "target": "1",
+            "value": {
+                "val": [
+                    2.6,
+                    5.2
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "1",
+            "target": "4",
+            "value": {
+                "val": [
+                    5.2,
+                    2
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "2",
+            "target": "3",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
         }
     ],
     "categories": [
@@ -51,6 +123,9 @@
         },
         {
             "name": "C"
+        },
+        {
+            "name": "D"
         }
     ]
 }

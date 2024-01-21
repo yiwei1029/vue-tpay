@@ -50,6 +50,20 @@
         <el-card>
             <div id="chart2" style="width: 600px;height: 300px;"></div>
         </el-card>
+        <!--  统计底部栏-->
+        <el-card>
+            <!-- 第一行 -->
+            <el-row>
+                <el-col :span="12" v-for="s in Stats">
+                    <el-statistic :title="s.title">
+                        <template slot="formatter">
+                            {{ s.value + s.unit }}
+                        </template>
+                    </el-statistic>
+                </el-col>
+            </el-row>
+
+        </el-card>
     </section>
 </template>
 
@@ -74,7 +88,11 @@ export default {
             AmountProfit: {
                 amount: [10, 20, 40, 50, 70, 100],
                 profit: [1, 2, 4.8, 5.5, 7.9, 10.5]
-            }
+            },
+            Stats: [
+                { title: 'Today Revenue', value: 1.04, unit: 'Bitcoins' },
+                { title: 'Today Transactions', value: 732, unit: '' },
+            ]
         }
     },
     components: {},
