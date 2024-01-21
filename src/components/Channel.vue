@@ -80,8 +80,11 @@ export default {
     components: {},
     watch: {},
     mounted() {
-        this.createPieChart('chart1', this.BalancePct),
-            this.createMixChart('chart2')
+        this.createPieChart('chart1', this.BalancePct);
+        this.createMixChart('chart2');
+        const testJson = require('../../static/Stu.json')
+        console.log('testData', testJson);
+
     },
     methods: {
         createPieChart(divName, dataArray) {
