@@ -116,25 +116,29 @@ export default {
     components: {},
     watch: {},
     mounted() {
-        this.createPieChart('chart1', this.FreeRateDist),
-            this.createPieChart('chart2', this.InbPayChannel);
-        this.createLineChart('chart3');
-        this.createHistChart('chart4');
+        this.createPieChart('chart1', this.FreeRateDist, 'free rate distribution'),
+            this.createPieChart('chart2', this.InbPayChannel, 'Inbalance payment channels');
+        this.createLineChart('chart3', 'Success ratio of transactions');
+        this.createHistChart('chart4', 'transaction amount');
         const Json = require('../../static/net.json')
 
         this.createMapGraph('graph1', Json)
     },
     methods: {
-        createPieChart(divName, dataArray) {
+        createPieChart(divName, dataArray, title) {
             var chart = echarts.init(document.getElementById(divName));
             var option = {
+                title: {
+                    text: title
+                },
                 tooltip: {
                     trigger: 'item',
                     formatter: "{a} <br/>{b}: {c} ({d}%)"
                 },
                 legend: {
                     orient: 'vertical',
-                    x: 'left',
+                    // x: 'bottom',
+                    y: 'bottom',
                     left: 0,
                     data: dataArray.map(item => item.name)
                 },
@@ -159,13 +163,16 @@ export default {
             }
             chart.setOption(option)
         },
-        createLineChart(divName) {
+        createLineChart(divName, title) {
             var chart = echarts.init(document.getElementById(divName));
 
             var option = {
+                title: {
+                    text: title
+                },
                 legend: {
                     orient: 'horizontal',
-                    x: 'left',
+                    y: 'bottom',
                     left: 0,
                     data: ['WareHouse-first', 'Baseline-greedy', 'Baseline-random']
                 },
@@ -204,13 +211,16 @@ export default {
             };
             chart.setOption(option)
         },
-        createHistChart(divName) {
+        createHistChart(divName, title) {
             var chart = echarts.init(document.getElementById(divName));
 
             var option = {
+                title: {
+                    text: title
+                },
                 legend: {
                     orient: 'horizontal',
-                    x: 'left',
+                    y: 'bottom',
                     left: 0,
                     data: ['Transasction Amount']
                 },

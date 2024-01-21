@@ -39,6 +39,7 @@
         <el-card>
             <el-row :gutter="20">
                 <el-col :span="16">
+                    <div>User transactions</div>
                     <div id="chart1" style="width: 800px; height: 300px;"></div>
                 </el-col>
 

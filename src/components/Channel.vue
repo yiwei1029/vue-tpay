@@ -25,7 +25,7 @@
                         <el-col :span="16">Current transaction fee: </el-col>
                         <el-col :span="6">{{ TxFees }}</el-col>
                     </el-row>
-                    <br/>
+                    <br />
                     <!-- 输入手续费 -->
                     <el-row :gutter="10">
                         <el-col :span="16"><el-input placeholder="Input a transaction fee(%)"></el-input> </el-col>
@@ -101,7 +101,7 @@ export default {
     watch: {},
     mounted() {
         this.createPieChart('chart1', this.BalancePct);
-        this.createMixChart('chart2');
+        this.createMixChart('chart2', 'Profit and Amount');
         // const testJson = require('../../static/Stu.json')
         // console.log('testData', testJson);
 
@@ -144,17 +144,20 @@ export default {
             }
             chart.setOption(option)
         },
-        createMixChart(divName) {
+        createMixChart(divName, title) {
             var chart = echarts.init(document.getElementById(divName));
 
             var option = {
+                title: {
+                    text: title
+                },
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: { type: 'cross' }
                 },
                 legend: {
                     orient: 'horizontal',
-                    x: 'left',
+                    y: 'bottom',
                     left: 0,
                     data: ['profit', 'amount'],
 
