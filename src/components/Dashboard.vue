@@ -33,7 +33,9 @@
                     <div id="chart1" style="width: 100%; height: 300px;"></div>
                 </el-col>
                 <!-- 网络图 -->
-                <el-col :span="12">2</el-col>
+                <el-col :span="12">
+                    <div id="graph1" style="width: 100%; height: 300px;"></div>
+                </el-col>
                 <!-- 最近的交易 -->
                 <el-col :span="6">
                     <div>Latest transations</div>
@@ -115,9 +117,12 @@ export default {
     watch: {},
     mounted() {
         this.createPieChart('chart1', this.FreeRateDist),
-            this.createPieChart('chart2', this.InbPayChannel),
-            this.createLineChart('chart3'),
-            this.createHistChart('chart4')
+            this.createPieChart('chart2', this.InbPayChannel);
+        this.createLineChart('chart3');
+        this.createHistChart('chart4');
+        const Json = require('../../static/net.json')
+
+        this.createMapGraph('graph1', Json)
     },
     methods: {
         createPieChart(divName, dataArray) {
@@ -225,13 +230,13 @@ export default {
                     },
 
                 ]
-            };
+            }
             chart.setOption(option)
         },
-        createMapGraph(divName, Jsonpath) {
-            var chartDom = document.getElementById(divName);
-            var myChart = echarts.init(chartDom);
-            var option;
+        createMapGraph(divName, Json) {
+            var chartDom = document.getElementById(divName)
+            var myChart = echarts.init(chartDom)
+            var option
 
             myChart.showLoading();
 
@@ -240,7 +245,7 @@ export default {
                 tooltip: {},
                 legend: [
                     {
-                        data: graph.categories.map(function (a) {
+                        data: Json.categories.map(function (a) {
                             return a.name;
                         })
                     }
@@ -250,9 +255,9 @@ export default {
                         name: 'Les Miserables',
                         type: 'graph',
                         layout: 'none',
-                        data: graph.nodes,
-                        links: graph.links,
-                        categories: graph.categories,
+                        data: Json.nodes,
+                        links: Json.links,
+                        categories: Json.categories,
                         roam: true,
                         label: {
                             show: true,
@@ -274,9 +279,7 @@ export default {
                 ]
             };
             myChart.setOption(option);
-
-
-            option && myChart.setOption(option);
+            // option && myChart.setOption(option);
         }
     }
 }
