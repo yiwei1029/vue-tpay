@@ -37,15 +37,18 @@
         </el-card>
 
         <!-- 最近的交易 -->
-        <el-card>
-            <el-row :gutter="20">
-                <el-col :span="16">
+        <el-row :gutter="20">
+
+
+            <el-col :span="16">
+                <el-card>
                     <div>User transactions</div>
                     <div id="chart1" style="width: 800px; height: 300px;"></div>
-                </el-col>
-
-                <el-col :span="8">
-                    <!-- 最近的交易 -->
+                </el-card>
+            </el-col>
+            <el-col :span="8">
+                <!-- 最近的交易 -->
+                <el-card>
                     <div>Latest transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
                         <el-table-column prop="time" label="time" width="">
@@ -53,9 +56,10 @@
                         <el-table-column prop="txhash" label="txhash" width="">
                         </el-table-column>
                     </el-table>
-                </el-col>
-            </el-row>
-        </el-card>
+                </el-card>
+
+            </el-col>
+        </el-row>
 
     </section>
 </template>

@@ -1,9 +1,10 @@
 <template>
     <section class="Channel">
-        <el-card>
-            <el-row>
-                <!--  左上支付通道-->
-                <el-col :span="16">
+
+        <el-row  :gutter="10">
+            <!--  左上支付通道-->
+            <el-col :span="16">
+                <el-card>
                     <el-row :gutter="10">
                         <el-col :span="16">
                             <el-select v-model="ChannelToSelect" placeholder="choose a channel" style="width: 100%;">
@@ -23,22 +24,24 @@
                         </el-col>
                     </el-row>
                     <el-row :gutter="10">
-                        <el-col :span="16">Current transaction fee: </el-col>
-                        <el-col :span="6">{{ TxFees }}</el-col>
+                        <el-col :span="16">Current transaction fee: {{ TxFees }} </el-col>
+                        <el-col :span="6"></el-col>
                     </el-row>
                     <br />
                     <!-- 输入手续费 -->
                     <el-row :gutter="10">
                         <el-col :span="16"><el-input v-model="TxFeesToUpdate"
                                 placeholder="Input a transaction fee(%)"></el-input> </el-col>
-                        <el-col :span="6"><el-button @click="TxFees=TxFeesToUpdate+'%'" type="primary" style="width: 100%;">Update</el-button></el-col>
+                        <el-col :span="6"><el-button @click="TxFees = TxFeesToUpdate + '%'" type="primary"
+                                style="width: 100%;">Update</el-button></el-col>
                     </el-row>
+                </el-card>
+            </el-col>
 
-                </el-col>
+            <!-- 右上 -->
 
-
-                <!-- 右上 -->
-                <el-col :span="8">
+            <el-col :span="8">
+                <el-card>
                     <div>Latest transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
                         <el-table-column prop="time" label="time" width="">
@@ -46,9 +49,9 @@
                         <el-table-column prop="txhash" label="txhash" width="">
                         </el-table-column>
                     </el-table>
-                </el-col>
-            </el-row>
-        </el-card>
+                </el-card>
+            </el-col>
+        </el-row>
 
         <!-- 中间 交易数量和收益折线图 -->
         <el-card>
@@ -86,8 +89,22 @@ export default {
             ],
             Channels: ['ch1', 'ch2', 'ch3', 'ch4'],
             BalancePct: [
-                { name: 'me', value: 100 },
-                { name: 'counter', value: 200 }
+                {
+                    name: 'User1', value: {
+                        value: 100,
+                        itemStyle: {
+                            color: '#41b883'
+                        }
+                    }
+                },
+                {
+                    name: 'User2', value: {
+                        value: 200,
+                        itemStyle: {
+                            color: '#35495e'
+                        }
+                    }
+                }
             ],
             TxFees: '1%',
             AmountProfit: {
@@ -104,14 +121,14 @@ export default {
     components: {},
     watch: {},
     mounted() {
-        this.createPieChart('chart1', this.BalancePct);
+        this.createBarChart('chart1', this.BalancePct);
         this.createMixChart('chart2', 'Profit and Amount');
         // const testJson = require('../../static/Stu.json')
         // console.log('testData', testJson);
 
     },
     methods: {
-        createPieChart(divName, dataArray) {
+        createBarChart(divName, dataArray) {
             var chart = echarts.init(document.getElementById(divName));
             var option = {
                 title: {
@@ -119,7 +136,7 @@ export default {
                 },
                 tooltip: {
                     trigger: 'item',
-                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                    formatter: "{b}: {c} "
                 },
                 legend: {
                     orient: 'horizontal',
@@ -127,22 +144,16 @@ export default {
                     left: 150,
                     data: dataArray.map(item => item.name)
                 },
+                xAxis: {
+
+                },
+                yAxis: {
+                    data: dataArray.map(item => item.name)
+                },
                 series: [
                     {
-                        // name: 'Source',
-                        name: dataArray.map(item => item.name),
-                        type: 'pie',
-                        avoidLabelOverlap: false,
-                        label: {
-                            normal: {
-                                show: true,
-                                position: 'inside',
-                                formatter: '{d}%',
-                            },
-                        },
-                        data: [
-                            ...dataArray
-                        ]
+                        type: 'bar',
+                        data: dataArray.map((item) => item.value)
                     }
                 ]
             }
@@ -185,7 +196,11 @@ export default {
                         name: 'profit',
                         data: this.AmountProfit['profit'],
                         type: 'line',
-                        areaStyle: {},
+                        lineStyle: {
+                            color: '#5470C6',
+                            width: 3
+                        },
+                        // areaStyle: {},
                         smooth: 'true',
 
                         yAxisIndex: 0
@@ -194,7 +209,7 @@ export default {
                         name: 'amount',
                         data: this.AmountProfit['amount'],
                         type: 'bar',
-                        areaStyle: {},
+                        // areaStyle: {},
                         smooth: 'true',
                         yAxisIndex: 1,
 

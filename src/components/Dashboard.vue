@@ -26,18 +26,28 @@
             </el-row>
         </el-card>
         <!-- 交易列表和网络 -->
-        <el-card>
-            <el-row>
-                <!-- free rate dist -->
-                <el-col :span="6">
-                    <div id="chart1" style="width: 100%; height: 300px;"></div>
-                </el-col>
-                <!-- 网络图 -->
-                <el-col :span="12">
+        <el-row :gutter="10">
+            <!-- free rate dist -->
+            <el-col :span="6">
+                <el-card>
+                    <div id="chart1" style="width: 100%; height: 150px;"></div>
+                    <!-- inbalance payment channels -->
+
+                    <div id="chart2" style="width: 100%;height: 150px;"></div>
+                </el-card>
+
+            </el-col>
+
+
+            <!-- 网络图 -->
+            <el-col :span="12">
+                <el-card>
                     <div id="graph1" style="width: 100%; height: 300px;"></div>
-                </el-col>
-                <!-- 最近的交易 -->
-                <el-col :span="6">
+                </el-card>
+            </el-col>
+            <!-- 最近的交易 -->
+            <el-col :span="6">
+                <el-card style="height: 340px; overflow: scroll;">
                     <div>Latest transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
                         <el-table-column prop="time" label="time" width="">
@@ -45,27 +55,26 @@
                         <el-table-column prop="txhash" label="txhash" width="">
                         </el-table-column>
                     </el-table>
-                </el-col>
-            </el-row>
-        </el-card>
-        <!-- 第三行 -->
-        <el-card>
-            <el-row>
-                <!-- inbalance payment channels -->
-                <el-col :span="6">
-                    <div id="chart2" style="width: 100%;height: 300px;"></div>
-                </el-col>
-                <!-- succcess ratio 折线图-->
-                <el-col :span="12">
-                    <div id="chart3" style="width: 100%; height: 300px;"></div>
-                </el-col>
-                <!-- 交易数量图 -->
-                <el-col :span="6">
-                    <div id="chart4" style="width: 100%; height: 300px;"></div>
+                </el-card>
 
-                </el-col>
-            </el-row>
-        </el-card>
+            </el-col>
+        </el-row>
+        <!-- 第三行 -->
+        <el-row :gutter="10">
+
+            <!-- succcess ratio 折线图-->
+            <el-col :span="8">
+                <el-card>
+                    <div id="chart3" style="width: 90%; height: 300px;"></div>
+                </el-card>
+            </el-col>
+            <!-- 交易数量图 -->
+            <el-col :span="8">
+                <el-card>
+                    <div id="chart4" style="width: 90%; height: 300px;"></div>
+                </el-card>
+            </el-col>
+        </el-row>
     </section>
 </template>
 
@@ -169,6 +178,7 @@ export default {
             var option = {
                 title: {
                     text: title
+
                 },
                 legend: {
                     orient: 'horizontal',
