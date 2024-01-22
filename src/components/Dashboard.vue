@@ -63,13 +63,13 @@
         <el-row :gutter="10">
 
             <!-- succcess ratio 折线图-->
-            <el-col :span="8">
+            <el-col :span="12">
                 <el-card>
                     <div id="chart3" style="width: 90%; height: 300px;"></div>
                 </el-card>
             </el-col>
             <!-- 交易数量图 -->
-            <el-col :span="8">
+            <el-col :span="12">
                 <el-card>
                     <div id="chart4" style="width: 90%; height: 300px;"></div>
                 </el-card>

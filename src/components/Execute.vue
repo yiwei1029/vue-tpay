@@ -18,7 +18,7 @@
 
                 <el-col :span="8">
                     <el-button @click="createRouteGraph" type="primary"
-                        style="width: 100%; margin: auto 0;">Route</el-button>
+                        style="width: 100%; margin: 30px 0;">Route</el-button>
                 </el-col>
             </el-row>
         </el-card>
@@ -31,7 +31,7 @@
                 </el-col>
 
                 <el-col :span="8">
-                    <el-button @click="send" type="primary" style="width: 100%;">Send</el-button>
+                    <el-button @click="send" type="primary" style="width: 100%; margin: 120px 10px;">Send</el-button>
                 </el-col>
             </el-row>
         </el-card>

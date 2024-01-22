@@ -1,7 +1,7 @@
 <template>
     <section class="Channel">
 
-        <el-row  :gutter="10">
+        <el-row :gutter="10">
             <!--  左上支付通道-->
             <el-col :span="16">
                 <el-card>
@@ -40,7 +40,7 @@
 
             <!-- 右上 -->
 
-            <el-col :span="8">
+            <el-col :span="8" style="height: 388px; overflow: scroll;">
                 <el-card>
                     <div>Latest transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
@@ -53,24 +53,31 @@
             </el-col>
         </el-row>
 
-        <!-- 中间 交易数量和收益折线图 -->
-        <el-card>
-            <div id="chart2" style="width: 100%;height: 300px;"></div>
-        </el-card>
-        <!--  统计底部栏-->
-        <el-card>
-            <!-- 第一行 -->
-            <el-row>
-                <el-col :span="12" v-for="s in Stats">
-                    <el-statistic :title="s.title">
-                        <template slot="formatter">
-                            {{ s.value + s.unit }}
-                        </template>
-                    </el-statistic>
-                </el-col>
-            </el-row>
+        <el-row :gutter="10">
+            <!-- 中间 交易数量和收益折线图 -->
 
-        </el-card>
+            <el-col :span="16">
+                <el-card>
+                    <div id="chart2" style="width: 100%;height: 300px;"></div>
+                </el-card>
+            </el-col>
+
+            <el-col :span="8">
+                <el-row v-for="s in Stats">
+                    <el-card style="height: 105px; padding: 30px;">
+                        <el-statistic :title="s.title">
+                            <template slot="formatter">
+                                {{ s.value + s.unit }}
+                            </template>
+                        </el-statistic>
+                    </el-card>
+                </el-row>
+            </el-col>
+        </el-row>
+
+        <!--  统计底部栏-->
+
+
     </section>
 </template>
 
