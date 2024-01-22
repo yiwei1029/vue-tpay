@@ -3,7 +3,7 @@
         {
             "id": "1",
             "name": "Node 1",
-            "symbolSize": 19.12381,
+            "symbolSize": 100,
             "x": -266.82776,
             "y": 299.6904,
             "value": {
@@ -16,7 +16,7 @@
         {
             "id": "2",
             "name": "Node 2",
-            "symbolSize": 4.6666666666666665,
+            "symbolSize": 80,
             "x": -418.08344,
             "y": 446.8853,
             "value": {
@@ -29,7 +29,7 @@
         {
             "id": "3",
             "name": "Node 3",
-            "symbolSize": 6.323809333333333,
+            "symbolSize": 70,
             "x": -212.76357,
             "y": 245.29176,
             "value": {
@@ -42,7 +42,7 @@
         {
             "id": "4",
             "name": "Node 4",
-            "symbolSize": 20,
+            "symbolSize": 50,
             "x": -270.76357,
             "y": 400.29176,
             "value": {
@@ -55,7 +55,7 @@
         {
             "id": "5",
             "name": "Node 5",
-            "symbolSize": 10,
+            "symbolSize": 50,
             "x": -150.76357,
             "y": 400.29176,
             "value": {
@@ -68,7 +68,7 @@
         {
             "id": "6",
             "name": "Node 6",
-            "symbolSize": 10,
+            "symbolSize": 50,
             "x": -400.76357,
             "y": 300.29176,
             "value": {
@@ -81,7 +81,7 @@
         {
             "id": "7",
             "name": "Node 7",
-            "symbolSize": 10,
+            "symbolSize": 40,
             "x": -450.76357,
             "y": 360.29176,
             "value": {
@@ -94,7 +94,7 @@
         {
             "id": "8",
             "name": "Node 8",
-            "symbolSize": 10,
+            "symbolSize": 40,
             "x": -150.76357,
             "y": 300.29176,
             "value": {
