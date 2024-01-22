@@ -17,7 +17,8 @@
                 </el-col>
 
                 <el-col :span="8">
-                    <el-button type="primary" style="width: 100%; margin: auto 0;">Route</el-button>
+                    <el-button @click="createRouteGraph" type="primary"
+                        style="width: 100%; margin: auto 0;">Route</el-button>
                 </el-col>
             </el-row>
         </el-card>
@@ -30,7 +31,7 @@
                 </el-col>
 
                 <el-col :span="8">
-                    <el-button type="primary" style="width: 100%;">Send</el-button>
+                    <el-button @click="send" type="primary" style="width: 100%;">Send</el-button>
                 </el-col>
             </el-row>
         </el-card>
@@ -66,7 +67,7 @@ export default {
     data() {
         return {
             InputAmount: '',
-            InputReceiver: '',
+            InputReceiver: 'bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n',
             LatestTrx: [
                 { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
                 { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
@@ -82,10 +83,12 @@ export default {
     watch: {},
     mounted() {
         this.createBarChart('chart1')
-        const Json = require('../../static/myRoute')
-        this.createRouteGraph('graph1', Json)
+
     },
     methods: {
+        send() {
+            this.$message.success('send success')
+        },
         createBarChart(divName) {
             var chartDom = document.getElementById(divName);
             var myChart = echarts.init(chartDom);
@@ -131,11 +134,12 @@ export default {
 
             myChart.setOption(option);
         },
-        createRouteGraph(divName, Json) {
+        createRouteGraph() {
 
-            var chartDom = document.getElementById(divName);
+            var chartDom = document.getElementById('graph1');
             var myChart = echarts.init(chartDom);
             var option;
+            const Json = require('../../static/myRoute')
 
             option = {
                 title: {
