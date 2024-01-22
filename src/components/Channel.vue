@@ -6,7 +6,7 @@
                 <el-col :span="16">
                     <el-row :gutter="10">
                         <el-col :span="16">
-                            <el-select placeholder="choose a channel" style="width: 100%;">
+                            <el-select v-model="ChannelToSelect" placeholder="choose a channel" style="width: 100%;">
                                 <el-option v-for="ch in Channels" :key="ch" :value="ch">
                                 </el-option>
                             </el-select></el-col>
@@ -18,7 +18,8 @@
                         <el-col :span="16">
                             <div id="chart1" style="width:100%;height: 200px;"></div>
                         </el-col>
-                        <el-col :span="6"><el-button type="danger" style="width: 100%;">Close</el-button>
+                        <el-col :span="6"><el-button @click="ChannelToSelect = ''" type="danger"
+                                style="width: 100%;">Close</el-button>
                         </el-col>
                     </el-row>
                     <el-row :gutter="10">
@@ -28,8 +29,9 @@
                     <br />
                     <!-- 输入手续费 -->
                     <el-row :gutter="10">
-                        <el-col :span="16"><el-input placeholder="Input a transaction fee(%)"></el-input> </el-col>
-                        <el-col :span="6"><el-button type="primary" style="width: 100%;">Update</el-button></el-col>
+                        <el-col :span="16"><el-input v-model="TxFeesToUpdate"
+                                placeholder="Input a transaction fee(%)"></el-input> </el-col>
+                        <el-col :span="6"><el-button @click="TxFees=TxFeesToUpdate+'%'" type="primary" style="width: 100%;">Update</el-button></el-col>
                     </el-row>
 
                 </el-col>
@@ -76,6 +78,7 @@ export default {
     name: 'Channel',
     data() {
         return {
+            ChannelToSelect: '',
             LatestTrx: [
                 { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
                 { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
@@ -94,7 +97,8 @@ export default {
             Stats: [
                 { title: 'Today Revenue', value: 1.04, unit: 'Bitcoins' },
                 { title: 'Today Transactions', value: 732, unit: '' },
-            ]
+            ],
+            TxFeesToUpdate: ''
         }
     },
     components: {},
