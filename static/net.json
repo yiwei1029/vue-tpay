@@ -3,7 +3,7 @@
         {
             "id": "1",
             "name": "Node 1",
-            "symbolSize": 100,
+            "symbolSize": 10,
             "x": -266.82776,
             "y": 299.6904,
             "value": {
@@ -11,25 +11,25 @@
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 2
+            "category": 1
         },
         {
             "id": "2",
             "name": "Node 2",
-            "symbolSize": 80,
-            "x": -418.08344,
-            "y": 446.8853,
+            "symbolSize": 8,
+            "x": -350.08344,
+            "y": 360.8853,
             "value": {
                 "val": 5.2,
                 "account": "bc1q9hyzumk0kqedzyd6vasgysk4x2al759esvtqfy",
                 "type": "node"
             },
-            "category": 0
+            "category": 2
         },
         {
             "id": "3",
             "name": "Node 3",
-            "symbolSize": 70,
+            "symbolSize": 7,
             "x": -212.76357,
             "y": 245.29176,
             "value": {
@@ -37,12 +37,12 @@
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 1
+            "category": 3
         },
         {
             "id": "4",
             "name": "Node 4",
-            "symbolSize": 50,
+            "symbolSize": 5,
             "x": -270.76357,
             "y": 400.29176,
             "value": {
@@ -50,12 +50,12 @@
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 3
+            "category": 4
         },
         {
             "id": "5",
             "name": "Node 5",
-            "symbolSize": 50,
+            "symbolSize": 5,
             "x": -150.76357,
             "y": 400.29176,
             "value": {
@@ -63,12 +63,12 @@
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 3
+            "category": 5
         },
         {
             "id": "6",
             "name": "Node 6",
-            "symbolSize": 50,
+            "symbolSize": 5,
             "x": -400.76357,
             "y": 300.29176,
             "value": {
@@ -76,12 +76,12 @@
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 2
+            "category": 6
         },
         {
             "id": "7",
             "name": "Node 7",
-            "symbolSize": 40,
+            "symbolSize": 4,
             "x": -450.76357,
             "y": 360.29176,
             "value": {
@@ -89,12 +89,12 @@
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 1
+            "category": 7
         },
         {
             "id": "8",
             "name": "Node 8",
-            "symbolSize": 40,
+            "symbolSize": 4,
             "x": -150.76357,
             "y": 300.29176,
             "value": {
@@ -102,7 +102,7 @@
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 2
+            "category": 8
         }
     ],
     "links": [
@@ -263,6 +263,18 @@
         },
         {
             "name": "D"
+        },
+        {
+            "name": "E"
+        },
+        {
+            "name": "f"
+        },
+        {
+            "name": "g"
+        },
+        {
+            "name": "h"
         }
     ]
 }

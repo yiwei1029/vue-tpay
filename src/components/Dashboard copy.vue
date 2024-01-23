@@ -1,90 +1,84 @@
 <template>
     <section class="Dashboard">
+        <el-row>
+            <el-col></el-col>
+            <el-col></el-col>
+        </el-row>
+
+        <el-card>
+            <!-- 第一行 -->
+            <el-row>
+                <el-col :span="12" v-for="s in Stats1">
+                    <el-statistic :title="s.title">
+                        <template slot="formatter">
+                            {{ s.value }}
+                        </template>
+                    </el-statistic>
+                </el-col>
+            </el-row>
+
+        </el-card>
+        <el-card>
+            <!-- 第二行  -->
+            <el-row>
+                <el-col :span="6" v-for="s in Stats2">
+                    <el-statistic :title="s.title">
+                        <template slot="formatter">
+                            {{ s.value }}
+                        </template>
+                    </el-statistic>
+                </el-col>
+            </el-row>
+        </el-card>
+        <!-- 交易列表和网络 -->
         <el-row :gutter="10">
-            <el-col :span="4">
-                <el-card style="position: relative; top:100px;">
+            <!-- free rate dist -->
+            <el-col :span="8">
+                <el-card>
                     <div>free rate dist</div>
                     <div id="chart1" style="width: 100%; height: 150px;"></div>
                     <!-- inbalance payment channels -->
                     <div>inbalance pay channels</div>
                     <div id="chart2" style="width: 100%;height: 150px;"></div>
                 </el-card>
+
             </el-col>
 
 
-
-            <el-col :span="20">
-                <el-card>
-                    <!-- 第一行 -->
-                    <el-row>
-                        <el-col :span="12" v-for="s in Stats1">
-                            <el-statistic :title="s.title">
-                                <template slot="formatter">
-                                    {{ s.value }}
-                                </template>
-                            </el-statistic>
-                        </el-col>
-                    </el-row>
-
+            <!-- 网络图 -->
+            <el-col :span="10">
+                <div id="graph1" style="width: 100% ; height: 385px;"></div>
+            </el-col>
+            <!-- 最近的交易 -->
+            <el-col :span="6">
+                <el-card style="height: 385px; overflow: scroll;">
+                    <div>Latest transations</div>
+                    <el-table :data="LatestTrx" style="width: 100%">
+                        <el-table-column prop="time" label="time" width="">
+                        </el-table-column>
+                        <el-table-column prop="txhash" label="txhash" width="">
+                        </el-table-column>
+                    </el-table>
                 </el-card>
-                <el-card>
-                    <!-- 第二行  -->
-                    <el-row>
-                        <el-col :span="6" v-for="s in Stats2">
-                            <el-statistic :title="s.title">
-                                <template slot="formatter">
-                                    {{ s.value }}
-                                </template>
-                            </el-statistic>
-                        </el-col>
-                    </el-row>
-                </el-card>
-
-                <!-- 交易列表和网络 -->
-                <el-row :gutter="10">
-
-
-                    <!-- 网络图 -->
-                    <el-col :span="12">
-                        <div id="graph1" style="width: 100% ; height: 385px; "></div>
-                    </el-col>
-                    <!-- 最近的交易 -->
-                    <el-col :span="12">
-                        <el-card style="height: 385px; overflow: scroll;">
-                            <div>Latest transations</div>
-                            <el-table :data="LatestTrx" style="width: 100%">
-                                <el-table-column prop="time" label="time" width="">
-                                </el-table-column>
-                                <el-table-column prop="txhash" label="txhash" width="">
-                                </el-table-column>
-                            </el-table>
-                        </el-card>
-
-                    </el-col>
-                </el-row>
-                <el-row :gutter="10">
-                    <!-- succcess ratio 折线图-->
-                    <el-col :span="12">
-                        <el-card>
-                            <div id="chart3" style="width: 90%; height: 300px;"></div>
-                        </el-card>
-                    </el-col>
-                    <!-- 交易数量图 -->
-                    <el-col :span="12">
-                        <el-card>
-                            <div id="chart4" style="width: 90%; height: 300px;"></div>
-                        </el-card>
-                    </el-col>
-                </el-row>
-
 
             </el-col>
         </el-row>
-
-
-
         <!-- 第三行 -->
+        <el-row :gutter="10">
 
+            <!-- succcess ratio 折线图-->
+            <el-col :span="12">
+                <el-card>
+                    <div id="chart3" style="width: 90%; height: 300px;"></div>
+                </el-card>
+            </el-col>
+            <!-- 交易数量图 -->
+            <el-col :span="12">
+                <el-card>
+                    <div id="chart4" style="width: 90%; height: 300px;"></div>
+                </el-card>
+            </el-col>
+        </el-row>
     </section>
 </template>
 
@@ -154,13 +148,13 @@ export default {
                     trigger: 'item',
                     formatter: "{a} <br/>{b}: {c} ({d}%)"
                 },
-                // legend: {
-                //     orient: 'horizontal',
-                //     x: 'bottom',
-                //     y: 'bottom',
-                //     left: 0,
-                //     data: dataArray.map(item => item.name)
-                // },
+                legend: {
+                    orient: 'vertical',
+                    // x: 'bottom',
+                    y: 'bottom',
+                    left: 0,
+                    data: dataArray.map(item => item.name)
+                },
                 series: [
                     {
                         // name: 'Source',

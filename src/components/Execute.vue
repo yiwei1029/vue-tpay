@@ -27,6 +27,7 @@
         <el-card>
             <el-row :gutter="20">
                 <el-col :span="16">
+                    <div>Transfer route</div>
                     <div id="graph1" style="width: 100%; height: 300px;"></div>
                 </el-col>
 
@@ -146,8 +147,9 @@ export default {
             const Json = require('../../static/myRoute')
 
             option = {
+                backgroundColor: '#0f202e',
                 title: {
-                    text: 'Transfer Route'
+                    // text: 'Transfer Route'
                 },
                 tooltip: {
                     trigger: 'item',
@@ -179,10 +181,14 @@ export default {
                         // links: [],
                         links: Json.links,
                         categories: Json.categories,
+                        itemStyle: {
+                            normal: { color: 'rgba(106,150,193,1)' }
+                        },
                         lineStyle: {
                             opacity: 0.9,
-                            width: 2,
-                            curveness: 0
+                            width: 4,
+                            curveness: 0.3,
+                            color: '#ffffff'
                         }
                     }
                 ]
