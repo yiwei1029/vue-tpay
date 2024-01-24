@@ -3,25 +3,33 @@
         <!-- 选择路径 -->
         <el-card>
             <el-row :gutter="20">
-                <el-col :span="16">
+                <el-col :span="7">
                     <div class="left-right">
                         <span>Receiver</span>
-                        <el-input v-model="InputReceiver" style="width: 50%;">
+                        <el-input v-model="InputReceiver" style="width: 70%;">
                         </el-input>
                     </div>
-                    <br />
-                    <div class="left-right">
-                        <span>Amount</span>
-                        <el-input v-model="InputAmount" style="width: 50%;"></el-input>
-                    </div>
                 </el-col>
-
-                <el-col :span="8">
-                    <el-button @click="createRouteGraph" type="primary"
-                        style="width: 100%; margin: 30px 0;">Route</el-button>
+                <el-col :span="4">
+                    <el-button @click="createRouteGraph" type="primary" style="width: 60%; ">Route</el-button>
                 </el-col>
             </el-row>
+            <br />
+            <el-row :gutter="12">
+                <el-col :span="7">
+                    <div class="left-right">
+                        <span>Amount</span>
+                        <el-input v-model="InputAmount" style="width: 70%;"></el-input>
+                    </div>
+                </el-col>
+                <el-col :span="4">
+                    <el-button type="primary" style="width: 60%; ">Direct</el-button>
+                </el-col>
+
+            </el-row>
+
         </el-card>
+
 
         <!-- route地图 -->
         <el-card>

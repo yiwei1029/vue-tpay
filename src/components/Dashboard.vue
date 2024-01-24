@@ -2,36 +2,50 @@
     <section class="Dashboard">
         <!-- 第一行 -->
         <el-row :gutter="10">
-            <el-col span="14">
-                <el-row><el-card>Today Cum Trx Fees:<sapn style="font-size: 50px;font-weight: 100; color: rgb(230, 188, 109);">100011</sapn></el-card></el-row>
-                <el-row>
-                    <el-col span="6"><el-card>Trx Amount<br /><br />1021</el-card></el-col>
-                    <el-col span="6"><el-card>Trx Frequency<br /><br />22</el-card></el-col>
-                    <el-col span="6"><el-card>Today Active Users<br />45</el-card></el-col>
-                    <el-col span="6"><el-card>Today new PCs<br /><br />14021</el-card></el-col>
-                </el-row>
-                <el-row>
-                    <el-col span="6"><el-card>Trx volume<br /><br />121</el-card></el-col>
-                    <el-col span="6"><el-card>Today Deposit Bitcoin<br />10323421</el-card></el-col>
-                    <el-col span="6"><el-card>Today active PCs<br />143021</el-card></el-col>
-                    <el-col span="6"><el-card>Today closed PCs<br />10231</el-card></el-col>
-                </el-row>
+            <el-col span="18">
+                <el-card>
+                    <el-row>Today Cum Trx Fees:<br />
+                        <sapn style="font-size: 50px;font-weight: 100; color: rgb(230, 188, 109);">100011</sapn>
+                    </el-row>
+                    <!-- <el-card> -->
+                    <br />
+                    <el-row>
+                        <el-col span="6">Trx Amount<br />1021</el-col>
+                        <el-col span="6">Trx Frequency<br />22</el-col>
+                        <el-col span="6">Today Active Users<br />45</el-col>
+                        <el-col span="6">Today new PCs<br />14021</el-col>
+                    </el-row>
+                    <br />
+
+                    <!-- </el-card> -->
+
+                    <!-- <el-card> -->
+                    <el-row>
+                        <el-col span="6">Trx volume<br />121</el-col>
+                        <el-col span="6">Today Deposit Bitcoin<br />10323421</el-col>
+                        <el-col span="6">Today active PCs<br />143021</el-col>
+                        <el-col span="6">Today closed PCs<br />10231</el-col>
+                    </el-row>
+                    <!-- </el-card> -->
+                </el-card>
             </el-col>
-            <el-col span="5">
+            <!-- <el-col span="5">
                 <div>free rate dist</div>
                 <div id="chart1" style="width: 100%; height: 150px;"></div>
-            </el-col>
-            <el-col span="5">
-                <div>inbalance pay channels</div>
-                <div id="chart2" style="width: 100%;height: 150px;"></div>
+            </el-col> -->
+            <el-col span="6">
+                <el-card>
+                    <div>inbalance pay channels</div>
+                    <div id="chart2" style="width: 100%;height: 195px;"></div>
+                </el-card>
+
             </el-col>
         </el-row>
 
 
-        <el-row>
+        <!-- <el-row>
             <el-col :span="24">
                 <el-card>
-                    <!-- 第一行 -->
                     <el-row>
                         <el-col :span="12" v-for="s in Stats1">
                             <el-statistic :title="s.title">
@@ -44,7 +58,6 @@
 
                 </el-card>
                 <el-card>
-                    <!-- 第二行  -->
                     <el-row>
                         <el-col :span="6" v-for="s in Stats2">
                             <el-statistic :title="s.title">
@@ -54,47 +67,47 @@
                             </el-statistic>
                         </el-col>
                     </el-row>
+                </el-card> -->
+
+        <!-- 交易列表和网络 -->
+        <el-row :gutter="10">
+
+
+            <!-- 网络图 -->
+            <el-col :span="18">
+                <div id="graph1" style="width: 100% ; height: 385px; "></div>
+            </el-col>
+            <!-- 最近的交易 -->
+            <el-col :span="6">
+                <el-card style="height: 385px; overflow: scroll;">
+                    <div>Latest transations</div>
+                    <el-table :data="LatestTrx" style="width: 100%">
+                        <el-table-column prop="time" label="time" width="">
+                        </el-table-column>
+                        <el-table-column prop="txhash" label="txhash" width="">
+                        </el-table-column>
+                    </el-table>
                 </el-card>
 
-                <!-- 交易列表和网络 -->
-                <el-row :gutter="10">
-
-
-                    <!-- 网络图 -->
-                    <el-col :span="12">
-                        <div id="graph1" style="width: 100% ; height: 385px; "></div>
-                    </el-col>
-                    <!-- 最近的交易 -->
-                    <el-col :span="12">
-                        <el-card style="height: 385px; overflow: scroll;">
-                            <div>Latest transations</div>
-                            <el-table :data="LatestTrx" style="width: 100%">
-                                <el-table-column prop="time" label="time" width="">
-                                </el-table-column>
-                                <el-table-column prop="txhash" label="txhash" width="">
-                                </el-table-column>
-                            </el-table>
-                        </el-card>
-
-                    </el-col>
-                </el-row>
-                <el-row :gutter="10">
-                    <!-- succcess ratio 折线图-->
-                    <el-col :span="12">
-                        <el-card>
-                            <div id="chart3" style="width: 90%; height: 300px;"></div>
-                        </el-card>
-                    </el-col>
-                    <!-- 交易数量图 -->
-                    <el-col :span="12">
-                        <el-card>
-                            <div id="chart4" style="width: 90%; height: 300px;"></div>
-                        </el-card>
-                    </el-col>
-                </el-row>
-
-
             </el-col>
+        </el-row>
+        <el-row :gutter="10">
+            <!-- succcess ratio 折线图-->
+            <el-col :span="18">
+                <el-card>
+                    <div id="chart3" style="width: 90%; height: 300px;"></div>
+                </el-card>
+            </el-col>
+            <!-- 交易数量图 -->
+            <el-col :span="6">
+                <el-card>
+                    <div id="chart4" style="width: 90%; height: 300px;"></div>
+                </el-card>
+            </el-col>
+        </el-row>
+
+
+        </el-col>
         </el-row>
 
 
@@ -151,8 +164,8 @@ export default {
     components: {},
     watch: {},
     mounted() {
-        this.createPieChart('chart1', this.FreeRateDist, 'free rate distribution'),
-            this.createPieChart('chart2', this.InbPayChannel, 'Inbalance payment channels');
+        // this.createPieChart('chart1', this.FreeRateDist, 'free rate distribution'),
+        this.createPieChart('chart2', this.InbPayChannel, 'Inbalance payment channels');
         this.createLineChart('chart3', 'Success ratio of transactions');
         this.createHistChart('chart4', 'transaction amount');
         const Json = require('../../static/net.json')
@@ -291,7 +304,7 @@ export default {
                 title: {
                     // text: 'Transaction Map'
                 },
-                backgroundColor: '#0f202e',
+                backgroundColor: '#ffffff',
                 tooltip: {
                     trigger: 'item',
                     fontSize: 6,
@@ -347,7 +360,7 @@ export default {
                             max: 2
                         },
                         lineStyle: {
-                            color: '#ffffff',
+                            color: '#6f9ee7',
                             curveness: 1,
                             width: 2
                         },
