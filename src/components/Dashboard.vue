@@ -1,19 +1,35 @@
 <template>
     <section class="Dashboard">
+        <!-- 第一行 -->
         <el-row :gutter="10">
-            <el-col :span="4">
-                <el-card style="position: relative; top:100px;">
-                    <div>free rate dist</div>
-                    <div id="chart1" style="width: 100%; height: 150px;"></div>
-                    <!-- inbalance payment channels -->
-                    <div>inbalance pay channels</div>
-                    <div id="chart2" style="width: 100%;height: 150px;"></div>
-                </el-card>
+            <el-col span="14">
+                <el-row><el-card>Today Cum Trx Fees:<sapn style="font-size: 50px;font-weight: 100; color: rgb(230, 188, 109);">100011</sapn></el-card></el-row>
+                <el-row>
+                    <el-col span="6"><el-card>Trx Amount<br /><br />1021</el-card></el-col>
+                    <el-col span="6"><el-card>Trx Frequency<br /><br />22</el-card></el-col>
+                    <el-col span="6"><el-card>Today Active Users<br />45</el-card></el-col>
+                    <el-col span="6"><el-card>Today new PCs<br /><br />14021</el-card></el-col>
+                </el-row>
+                <el-row>
+                    <el-col span="6"><el-card>Trx volume<br /><br />121</el-card></el-col>
+                    <el-col span="6"><el-card>Today Deposit Bitcoin<br />10323421</el-card></el-col>
+                    <el-col span="6"><el-card>Today active PCs<br />143021</el-card></el-col>
+                    <el-col span="6"><el-card>Today closed PCs<br />10231</el-card></el-col>
+                </el-row>
             </el-col>
+            <el-col span="5">
+                <div>free rate dist</div>
+                <div id="chart1" style="width: 100%; height: 150px;"></div>
+            </el-col>
+            <el-col span="5">
+                <div>inbalance pay channels</div>
+                <div id="chart2" style="width: 100%;height: 150px;"></div>
+            </el-col>
+        </el-row>
 
 
-
-            <el-col :span="20">
+        <el-row>
+            <el-col :span="24">
                 <el-card>
                     <!-- 第一行 -->
                     <el-row>
