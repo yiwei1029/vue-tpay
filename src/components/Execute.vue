@@ -1,71 +1,89 @@
 <template>
     <section class="Execute">
         <!-- 选择路径 -->
-        <el-card>
-            <el-row :gutter="20">
-                <el-col :span="7">
-                    <div class="left-right">
-                        <span>Receiver</span>
-                        <el-input v-model="InputReceiver" style="width: 70%;">
-                        </el-input>
-                    </div>
-                </el-col>
-                <el-col :span="4">
-                    <el-button @click="createRouteGraph" type="primary" style="width: 60%; ">Route</el-button>
-                </el-col>
-            </el-row>
-            <br />
-            <el-row :gutter="12">
-                <el-col :span="7">
-                    <div class="left-right">
-                        <span>Amount</span>
-                        <el-input v-model="InputAmount" style="width: 70%;"></el-input>
-                    </div>
-                </el-col>
-                <el-col :span="4">
-                    <el-button type="primary" style="width: 60%; ">Direct</el-button>
-                </el-col>
+        <el-row :gutter="10">
+            <el-col :span="10">
+                <el-card>
+                    <el-row :gutter="10">
+                        <el-col :span="18">
+                            <div class="left-right">
+                                <span>Receiver</span>
+                                <el-input v-model="InputReceiver" style="width: 70%;">
+                                </el-input>
+                            </div>
+                        </el-col>
+                        <el-col :span="6">
+                            <el-button @click="createRouteGraph" type="primary" style="width: 100%; ">Route</el-button>
+                        </el-col>
+                    </el-row>
+                    <br />
+                    <el-row :gutter="10">
+                        <el-col :span="18">
+                            <div class="left-right">
+                                <span>Amount</span>
+                                <el-input v-model="InputAmount" style="width: 70%;"></el-input>
+                            </div>
+                        </el-col>
+                        <el-col :span="6">
+                            <el-button type="primary" style="width: 100%; ">Direct</el-button>
+                        </el-col>
 
-            </el-row>
+                    </el-row>
 
-        </el-card>
+                </el-card>
+            </el-col>
+            <el-col :span="10">
+                
+
+                <!-- 最近的交易 -->
+                <el-card>
+                    <div>Latest transations</div>
+                    <el-table :data="LatestTrx" style="width: 100% ;height: 80px;overflow: scroll;">
+                        <el-table-column prop="time" label="time" width="100">
+                        </el-table-column>
+                        <el-table-column prop="txhash" label="txhash" width="">
+                        </el-table-column>
+                    </el-table>
+                </el-card>
+            </el-col>
+        </el-row>
+
+        <el-row :gutter="10">
+            <el-col :span="10">
+                <!-- route地图 -->
+                <el-card>
+                    <el-row :gutter="20">
+                        <el-col :span="16">
+                            <div>Transfer route</div>
+                            <div id="graph1" style="width: 80%; height: 300px;"></div>
+                        </el-col>
+
+                        <el-col :span="8">
+                            <el-button @click="send" type="primary"
+                                style="width: 100%; margin: 120px 10px;">Send</el-button>
+                        </el-col>
+                    </el-row>
+                </el-card>
+            </el-col>
+            <el-col :span="10">
+                <el-card>
+                    <div>User transactions</div>
+                    <div id="chart1" style="width: 100%; height: 300px;"></div>
+                </el-card>
+            </el-col>
+        </el-row>
 
 
-        <!-- route地图 -->
-        <el-card>
-            <el-row :gutter="20">
-                <el-col :span="16">
-                    <div>Transfer route</div>
-                    <div id="graph1" style="width: 100%; height: 300px;"></div>
-                </el-col>
-
-                <el-col :span="8">
-                    <el-button @click="send" type="primary" style="width: 100%; margin: 120px 10px;">Send</el-button>
-                </el-col>
-            </el-row>
-        </el-card>
 
         <!-- 最近的交易 -->
         <el-row :gutter="20">
 
 
             <el-col :span="16">
-                <el-card>
-                    <div>User transactions</div>
-                    <div id="chart1" style="width: 800px; height: 300px;"></div>
-                </el-card>
+
             </el-col>
             <el-col :span="8">
-                <!-- 最近的交易 -->
-                <el-card>
-                    <div>Latest transations</div>
-                    <el-table :data="LatestTrx" style="width: 100%">
-                        <el-table-column prop="time" label="time" width="">
-                        </el-table-column>
-                        <el-table-column prop="txhash" label="txhash" width="">
-                        </el-table-column>
-                    </el-table>
-                </el-card>
+
 
             </el-col>
         </el-row>
@@ -82,9 +100,9 @@ export default {
             InputAmount: '',
             InputReceiver: 'bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n',
             LatestTrx: [
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." },
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c..." }
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce..." }
             ],
             AmountVolume: {
                 amount: [20, 30, 24, 19, 42, 35], //数量
