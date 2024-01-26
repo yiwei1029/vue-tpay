@@ -36,7 +36,7 @@
             <el-col span="6">
                 <el-card>
                     <div>inbalance pay channels</div>
-                    <div id="chart2" style="width: 100%;height: 100%;"></div>
+                    <div id="chart2" style="width: 100%;height: 197px;"></div>
                 </el-card>
 
             </el-col>
@@ -57,7 +57,7 @@
             </el-col>
             <!-- 最近的交易 -->
             <el-col :span="6">
-                <el-card style="height: 385px; overflow: scroll;">
+                <el-card style="height: 425px; overflow: scroll;">
                     <div>Latest transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
                         <el-table-column prop="time" label="time" width="">
@@ -66,13 +66,13 @@
                         </el-table-column>
                     </el-table>
                 </el-card>
-
             </el-col>
         </el-row>
         <el-row :gutter="10">
             <!-- succcess ratio 折线图-->
             <el-col :span="18">
                 <el-card>
+                    <div>Success ratio of transactions</div>
                     <div id="chart3" style="width: 90%; height: 300px;"></div>
                 </el-card>
             </el-col>
@@ -137,7 +137,7 @@ export default {
     mounted() {
         // this.createPieChart('chart1', this.FreeRateDist, 'free rate distribution'),
         this.createPieChart('chart2', this.InbPayChannel, 'Inbalance payment channels');
-        this.createLineChart('chart3', 'Success ratio of transactions');
+        this.createLineChart('chart3', '');
         this.createHistChart('chart4', '');
         const Json = require('../../static/net.json')
 
@@ -186,10 +186,10 @@ export default {
             var chart = echarts.init(document.getElementById(divName));
 
             var option = {
-                title: {
-                    text: title
+                // title: {
+                //     text: title
 
-                },
+                // },
                 legend: {
                     orient: 'horizontal',
                     y: 'bottom',

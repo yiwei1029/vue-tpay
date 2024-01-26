@@ -33,7 +33,7 @@
                 </el-card>
             </el-col>
             <el-col :span="10">
-                
+
 
                 <!-- 最近的交易 -->
                 <el-card>
@@ -173,7 +173,7 @@ export default {
             const Json = require('../../static/myRoute')
 
             option = {
-                backgroundColor: '#0f202e',
+                // backgroundColor: '#0f202e',
                 title: {
                     // text: 'Transfer Route'
                 },
@@ -208,13 +208,13 @@ export default {
                         links: Json.links,
                         categories: Json.categories,
                         itemStyle: {
-                            normal: { color: 'rgba(106,150,193,1)' }
+                            normal: { color: '#007acc' }
                         },
                         lineStyle: {
                             opacity: 0.9,
                             width: 4,
                             curveness: 0.3,
-                            color: '#ffffff'
+                            color: '#007acc'
                         }
                     }
                 ]

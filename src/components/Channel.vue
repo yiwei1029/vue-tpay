@@ -40,8 +40,8 @@
 
             <!-- 右上 -->
 
-            <el-col :span="8" style="height: 388px; overflow: scroll;">
-                <el-card>
+            <el-col :span="8" style=" overflow: scroll;">
+                <el-card style="height: 388px;">
                     <div>Latest transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
                         <el-table-column prop="Time" label="Time" width="">
