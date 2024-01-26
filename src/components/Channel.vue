@@ -3,7 +3,7 @@
 
         <el-row :gutter="10">
             <!--  左上支付通道-->
-            <el-col :span="14">
+            <el-col :span="8">
                 <el-card>
                     <el-row :gutter="10">
                         <el-col :span="20">
@@ -40,7 +40,7 @@
 
             <!-- 右上 -->
 
-            <el-col :span="8" style=" overflow: scroll;">
+            <el-col :span="4" style=" overflow: scroll;">
                 <el-card style="height: 388px;">
                     <div>Latest transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
@@ -56,13 +56,13 @@
         <el-row :gutter="10">
             <!-- 中间 交易数量和收益折线图 -->
 
-            <el-col :span="14">
+            <el-col :span="8">
                 <el-card>
                     <div id="chart2" style="width: 100%;height: 300px;"></div>
                 </el-card>
             </el-col>
 
-            <el-col :span="8">
+            <el-col :span="4">
                 <el-row v-for="s in Stats">
                     <el-card style="height: 105px; padding: 30px;">
                         <el-statistic :title="s.title">

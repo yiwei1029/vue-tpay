@@ -2,7 +2,7 @@
     <section class="Execute">
         <!-- 选择路径 -->
         <el-row :gutter="10">
-            <el-col :span="10">
+            <el-col :span="8">
                 <el-card>
                     <el-row :gutter="10">
                         <el-col :span="18">
@@ -32,7 +32,7 @@
 
                 </el-card>
             </el-col>
-            <el-col :span="10">
+            <el-col :span="6">
 
 
                 <!-- 最近的交易 -->
@@ -49,7 +49,7 @@
         </el-row>
 
         <el-row :gutter="10">
-            <el-col :span="10">
+            <el-col :span="8">
                 <!-- route地图 -->
                 <el-card>
                     <el-row :gutter="20">
@@ -65,7 +65,7 @@
                     </el-row>
                 </el-card>
             </el-col>
-            <el-col :span="10">
+            <el-col :span="6">
                 <el-card>
                     <div>User transactions</div>
                     <div id="chart1" style="width: 100%; height: 300px;"></div>
