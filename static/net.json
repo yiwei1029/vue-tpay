@@ -1,6 +1,45 @@
 {
     "nodes": [
         {
+            "id": "n1",
+            "name": "n1",
+            "symbolSize": 10,
+            "x": -560,
+            "y": 265,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 5
+        },
+        {
+            "id": "n2",
+            "name": "n2",
+            "symbolSize": 10,
+            "x": -565,
+            "y": 270,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 5
+        },
+        {
+            "id": "n3",
+            "name": "n3",
+            "symbolSize": 20,
+            "x": -540,
+            "y": 250,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 5
+        },
+        {
             "id": "c1",
             "name": "c1",
             "symbolSize": 10,
@@ -12,10 +51,11 @@
                 "type": "node"
             },
             "category": 5
-        },{
+        },
+        {
             "id": "c2",
             "name": "c2",
-            "symbolSize": 10,
+            "symbolSize": 20,
             "x": -70,
             "y": 260,
             "value": {
@@ -24,7 +64,8 @@
                 "type": "node"
             },
             "category": 5
-        },{
+        },
+        {
             "id": "c3",
             "name": "c3",
             "symbolSize": 10,
@@ -92,7 +133,7 @@
         {
             "id": "b5",
             "name": "b5",
-            "symbolSize": 10,
+            "symbolSize": 30,
             "x": -80,
             "y": 362,
             "value": {
@@ -170,7 +211,7 @@
         {
             "id": "r5",
             "name": "r5",
-            "symbolSize": 10,
+            "symbolSize": 20,
             "x": -80,
             "y": 320,
             "value": {
@@ -547,7 +588,7 @@
         {
             "id": "y6",
             "name": "y6",
-            "symbolSize": 10,
+            "symbolSize": 20,
             "x": -280,
             "y": 235,
             "value": {
@@ -560,7 +601,7 @@
         {
             "id": "y7",
             "name": "y7",
-            "symbolSize": 10,
+            "symbolSize": 20,
             "x": -280,
             "y": 210,
             "value": {
@@ -742,7 +783,7 @@
         {
             "id": "s3",
             "name": "s3",
-            "symbolSize": 10,
+            "symbolSize": 30,
             "x": -530,
             "y": 410,
             "value": {
@@ -755,7 +796,7 @@
         {
             "id": "m1",
             "name": "m1",
-            "symbolSize": 10,
+            "symbolSize": 20,
             "x": -600,
             "y": 340,
             "value": {
@@ -1560,7 +1601,7 @@
                 "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
                 "type": "link"
             }
-        }   ,
+        },
         {
             "source": "y2",
             "target": "x5",
@@ -1572,7 +1613,7 @@
                 "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
                 "type": "link"
             }
-        }   ,
+        },
         {
             "source": "x2",
             "target": "y7",
@@ -1584,7 +1625,7 @@
                 "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
                 "type": "link"
             }
-        }   ,
+        },
         {
             "source": "x2",
             "target": "y3",
@@ -1596,7 +1637,7 @@
                 "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
                 "type": "link"
             }
-        }  ,
+        },
         {
             "source": "x3",
             "target": "y4",
@@ -1608,7 +1649,151 @@
                 "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
                 "type": "link"
             }
-        }    
+        },
+        {
+            "source": "m3",
+            "target": "c3",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "c1",
+            "target": "m1",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "m2",
+            "target": "c2",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "m3",
+            "target": "c1",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "s1",
+            "target": "c3",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "s3",
+            "target": "c2",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "s2",
+            "target": "c3",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "n3",
+            "target": "r8",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "n1",
+            "target": "r6",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        } ,
+        {
+            "source": "n3",
+            "target": "r11",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "n1",
+            "target": "r6",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "n2",
+            "target": "b3",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        }
     ],
     "categories": [
         {
