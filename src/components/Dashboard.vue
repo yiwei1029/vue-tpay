@@ -2,7 +2,7 @@
     <section class="Dashboard">
         <!-- 第一行 -->
         <el-row :gutter="10">
-            <el-col span="12">
+            <el-col span="8">
                 <el-card>
                     <el-row>Today Cum Trx Fees:<br />
                         <sapn style="font-size: 50px;font-weight: 100; color: rgb(230, 188, 109);">100011</sapn>
@@ -11,9 +11,9 @@
                     <br />
                     <el-row>
                         <el-col span="6">Trx Amount<br />1021</el-col>
-                        <el-col span="6">Trx Frequency<br />22</el-col>
-                        <el-col span="6">Today Active Users<br />45</el-col>
-                        <el-col span="6">Today new PCs<br />14021</el-col>
+                        <el-col span="6">Trx Frequency<br />22 tx/s</el-col>
+                        <el-col span="6">Active Users<br />45</el-col>
+                        <el-col span="6">New PCs<br />14021</el-col>
                     </el-row>
                     <br />
 
@@ -22,9 +22,9 @@
                     <!-- <el-card> -->
                     <el-row>
                         <el-col span="6">Trx volume<br />121</el-col>
-                        <el-col span="6">Today Deposit Bitcoin<br />10323421</el-col>
-                        <el-col span="6">Today active PCs<br />143021</el-col>
-                        <el-col span="6">Today closed PCs<br />10231</el-col>
+                        <el-col span="6">Deposit Bitcoin<br />10323421</el-col>
+                        <el-col span="6">Active PCs<br />143021</el-col>
+                        <el-col span="6">Closed PCs<br />10231</el-col>
                     </el-row>
                     <!-- </el-card> -->
                 </el-card>
@@ -33,10 +33,10 @@
                 <div>free rate dist</div>
                 <div id="chart1" style="width: 100%; height: 150px;"></div>
             </el-col> -->
-            <el-col span="4">
+            <el-col span="5">
                 <el-card>
-                    <div>inbalance pay channels</div>
-                    <div id="chart2" style="width: 100%;height: 197px;"></div>
+                    <div>PC's Inbalance</div>
+                    <div id="chart2" style="width: 100%;height: 210px;"></div>
                 </el-card>
 
             </el-col>
@@ -49,20 +49,20 @@
 
 
             <!-- 网络图 -->
-            <el-col :span="12">
+            <el-col :span="8">
                 <el-card>
                     <div id="graph1" style="width: 100% ; height: 385px; "></div>
                 </el-card>
 
             </el-col>
             <!-- 最近的交易 -->
-            <el-col :span="4">
+            <el-col :span="5">
                 <el-card style="height: 425px; overflow: scroll;">
-                    <div>Latest transations</div>
+                    <div>Latest Transations</div>
                     <el-table :data="LatestTrx" style="width: 100%">
-                        <el-table-column prop="time" label="time" width="">
+                        <el-table-column prop="time" label="Time" width="">
                         </el-table-column>
-                        <el-table-column prop="txhash" label="txhash" width="">
+                        <el-table-column prop="txhash" label="Txhash" width="">
                         </el-table-column>
                     </el-table>
                 </el-card>
@@ -70,17 +70,17 @@
         </el-row>
         <el-row :gutter="10">
             <!-- succcess ratio 折线图-->
-            <el-col :span="12">
+            <el-col :span="8">
                 <el-card>
-                    <div>Success ratio of transactions</div>
-                    <div id="chart3" style="width: 90%; height: 300px;"></div>
+                    <div>Success Ratio of Transactions</div>
+                    <div id="chart3" style="width: 100%; height: 300px;"></div>
                 </el-card>
             </el-col>
             <!-- 交易数量图 -->
-            <el-col :span="4">
+            <el-col :span="5">
                 <el-card>
                     <div>Transaction Amount</div>
-                    <div id="chart4" style="width: 90%; height: 300px;"></div>
+                    <div id="chart4" style="width: 100%; height: 300px;"></div>
                 </el-card>
             </el-col>
         </el-row>
@@ -193,7 +193,7 @@ export default {
                 legend: {
                     orient: 'horizontal',
                     y: 'bottom',
-                    left: 0,
+                    left: 100,
                     data: ['WareHouse-first', 'Baseline-greedy', 'Baseline-random']
                 },
                 xAxis: {
@@ -205,16 +205,16 @@ export default {
                         name: 'WareHouse-first',
                         data: this.SuccessRatio['WareHouse-first'],
                         type: 'line',
-                        stack: 'x',
-                        areaStyle: {},
+                        // stack: 'x',
+                        // areaStyle: {},
                         smooth: 'true'
                     },
                     {
                         name: 'Baseline-greedy',
                         data: this.SuccessRatio['Baseline-greedy'],
                         type: 'line',
-                        stack: 'x',
-                        areaStyle: {},
+                        // stack: 'x',
+                        // areaStyle: {},   
                         smooth: 'true'
 
                     },
@@ -222,8 +222,8 @@ export default {
                         name: 'Baseline-random',
                         data: this.SuccessRatio['Baseline-random'],
                         type: 'line',
-                        stack: 'x',
-                        areaStyle: {},
+                        // stack: 'x',
+                        // areaStyle: {},
                         smooth: 'true'
 
                     }
@@ -241,7 +241,7 @@ export default {
                 legend: {
                     orient: 'horizontal',
                     y: 'bottom',
-                    left: 0,
+                    left: 70,
                     data: ['Transasction Amount']
                 },
                 xAxis: {

@@ -37,11 +37,11 @@
 
                 <!-- 最近的交易 -->
                 <el-card>
-                    <div>Latest transations</div>
+                    <div>Latest Transactions</div>
                     <el-table :data="LatestTrx" style="width: 100% ;height: 80px;overflow: scroll;">
-                        <el-table-column prop="time" label="time" width="100">
+                        <el-table-column prop="time" label="Time" width="100">
                         </el-table-column>
-                        <el-table-column prop="txhash" label="txhash" width="">
+                        <el-table-column prop="txhash" label="TxHash" width="">
                         </el-table-column>
                     </el-table>
                 </el-card>
@@ -54,7 +54,7 @@
                 <el-card>
                     <el-row :gutter="20">
                         <el-col :span="16">
-                            <div>Transfer route</div>
+                            <div>Transfer Route</div>
                             <div id="graph1" style="width: 80%; height: 300px;"></div>
                         </el-col>
 
@@ -67,7 +67,7 @@
             </el-col>
             <el-col :span="6">
                 <el-card>
-                    <div>User transactions</div>
+                    <div>User Transactions</div>
                     <div id="chart1" style="width: 100%; height: 300px;"></div>
                 </el-card>
             </el-col>
@@ -133,7 +133,7 @@ export default {
                     }
                 },
                 legend: {
-                    data: ['amount', 'volume']
+                    data: ['Amount', 'Volume']
                 },
                 xAxis: {
                     type: 'category',
@@ -142,11 +142,11 @@ export default {
                     ]
                 },
                 yAxis: [{
-                    type: 'value', name: 'amount', position: 'right', min: 0,
+                    type: 'value', name: 'Amount', position: 'right', min: 0,
                     max: 80
                 },
                 {
-                    type: 'value', name: 'volume', position: 'left', min: 0,
+                    type: 'value', name: 'Volume', position: 'left', min: 0,
                     max: 80000
                 }],
                 series: [

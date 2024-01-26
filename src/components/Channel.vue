@@ -7,7 +7,7 @@
                 <el-card>
                     <el-row :gutter="10">
                         <el-col :span="20">
-                            <el-select v-model="ChannelToSelect" placeholder="choose a channel" style="width: 100%;">
+                            <el-select v-model="ChannelToSelect" placeholder="Choose a channel" style="width: 100%;">
                                 <el-option v-for="ch in Channels" :key="ch" :value="ch">
                                 </el-option>
                             </el-select></el-col>
@@ -24,7 +24,7 @@
                         </el-col>
                     </el-row>
                     <el-row :gutter="10">
-                        <el-col :span="20">Current transaction fee: {{ TxFees }} </el-col>
+                        <el-col :span="20">Current Transaction Fee: {{ TxFees }} </el-col>
                         <el-col :span="4"></el-col>
                     </el-row>
                     <br />
@@ -40,9 +40,9 @@
 
             <!-- 右上 -->
 
-            <el-col :span="4" style=" overflow: scroll;">
-                <el-card style="height: 388px;">
-                    <div>Latest transations</div>
+            <el-col :span="4">
+                <el-card style="height: 388px; overflow: scroll;">
+                    <div>Latest Transactions</div>
                     <el-table :data="LatestTrx" style="width: 100%">
                         <el-table-column prop="Time" label="Time" width="">
                         </el-table-column>
@@ -63,7 +63,7 @@
             </el-col>
 
             <el-col :span="4">
-                <el-row v-for="s in Stats">
+                <!-- <el-row v-for="s in Stats">
                     <el-card style="height: 105px; padding: 30px;">
                         <el-statistic :title="s.title">
                             <template slot="formatter">
@@ -71,7 +71,20 @@
                             </template>
                         </el-statistic>
                     </el-card>
-                </el-row>
+                </el-row> -->
+                <el-card style="height: 105px; padding: 30px;">
+                    <el-row>
+                        <div style="text-align: center;font-size: 21px;">Today Revenue</div>
+                        <div style="text-align: center;">1.04Bitcoins</div>
+                    </el-row>
+                </el-card>
+                <el-card style="height: 105px; padding: 30px;">
+                    <el-row>
+                        <div style="text-align: center;font-size: 21px;">Today Transactions</div>
+                        <div style="text-align: center;">732</div>
+                    </el-row>
+                </el-card>
+
             </el-col>
         </el-row>
 
