@@ -36,38 +36,13 @@
             <el-col span="6">
                 <el-card>
                     <div>inbalance pay channels</div>
-                    <div id="chart2" style="width: 100%;height: 195px;"></div>
+                    <div id="chart2" style="width: 100%;height: 100%;"></div>
                 </el-card>
 
             </el-col>
         </el-row>
 
 
-        <!-- <el-row>
-            <el-col :span="24">
-                <el-card>
-                    <el-row>
-                        <el-col :span="12" v-for="s in Stats1">
-                            <el-statistic :title="s.title">
-                                <template slot="formatter">
-                                    {{ s.value }}
-                                </template>
-                            </el-statistic>
-                        </el-col>
-                    </el-row>
-
-                </el-card>
-                <el-card>
-                    <el-row>
-                        <el-col :span="6" v-for="s in Stats2">
-                            <el-statistic :title="s.title">
-                                <template slot="formatter">
-                                    {{ s.value }}
-                                </template>
-                            </el-statistic>
-                        </el-col>
-                    </el-row>
-                </el-card> -->
 
         <!-- 交易列表和网络 -->
         <el-row :gutter="10">
@@ -75,7 +50,10 @@
 
             <!-- 网络图 -->
             <el-col :span="18">
-                <div id="graph1" style="width: 100% ; height: 385px; "></div>
+                <el-card>
+                    <div id="graph1" style="width: 100% ; height: 385px; "></div>
+                </el-card>
+
             </el-col>
             <!-- 最近的交易 -->
             <el-col :span="6">
@@ -101,18 +79,11 @@
             <!-- 交易数量图 -->
             <el-col :span="6">
                 <el-card>
+                    <div>Transaction Amount</div>
                     <div id="chart4" style="width: 90%; height: 300px;"></div>
                 </el-card>
             </el-col>
         </el-row>
-
-
-        </el-col>
-        </el-row>
-
-
-
-        <!-- 第三行 -->
 
     </section>
 </template>
@@ -167,7 +138,7 @@ export default {
         // this.createPieChart('chart1', this.FreeRateDist, 'free rate distribution'),
         this.createPieChart('chart2', this.InbPayChannel, 'Inbalance payment channels');
         this.createLineChart('chart3', 'Success ratio of transactions');
-        this.createHistChart('chart4', 'transaction amount');
+        this.createHistChart('chart4', '');
         const Json = require('../../static/net.json')
 
         this.createMapGraph('graph1', Json)
@@ -264,9 +235,9 @@ export default {
             var chart = echarts.init(document.getElementById(divName));
 
             var option = {
-                title: {
-                    text: title
-                },
+                // title: {
+                //     text: title
+                // },
                 legend: {
                     orient: 'horizontal',
                     y: 'bottom',
@@ -345,7 +316,7 @@ export default {
                             position: 'right',
                             formatter: '{b}'
                         },
-                        edgeSymbol: ['circle', 'arrow'],
+                        edgeSymbol: ['circle', ''],
                         edgeSymbolSize: [4, 10],
                         // edgeLabel: {
                         //     fontSize: 14,
@@ -361,7 +332,7 @@ export default {
                         },
                         lineStyle: {
                             color: '#6f9ee7',
-                            curveness: 1,
+                            curveness: 0,
                             width: 2
                         },
                         itemStyle: {

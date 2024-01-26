@@ -1,63 +1,11 @@
 {
     "nodes": [
         {
-            "id": "1",
-            "name": "Node 1",
+            "id": "r1",
+            "name": "r1",
             "symbolSize": 10,
-            "x": -266.82776,
-            "y": 299.6904,
-            "value": {
-                "val": 5.2,
-                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
-                "type": "node"
-            },
-            "category": 1
-        },
-        {
-            "id": "2",
-            "name": "Node 2",
-            "symbolSize": 8,
-            "x": -350.08344,
-            "y": 360.8853,
-            "value": {
-                "val": 5.2,
-                "account": "bc1q9hyzumk0kqedzyd6vasgysk4x2al759esvtqfy",
-                "type": "node"
-            },
-            "category": 2
-        },
-        {
-            "id": "3",
-            "name": "Node 3",
-            "symbolSize": 7,
-            "x": -212.76357,
-            "y": 245.29176,
-            "value": {
-                "val": 5.2,
-                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
-                "type": "node"
-            },
-            "category": 3
-        },
-        {
-            "id": "4",
-            "name": "Node 4",
-            "symbolSize": 5,
-            "x": -270.76357,
-            "y": 400.29176,
-            "value": {
-                "val": 5.2,
-                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
-                "type": "node"
-            },
-            "category": 4
-        },
-        {
-            "id": "5",
-            "name": "Node 5",
-            "symbolSize": 5,
-            "x": -150.76357,
-            "y": 400.29176,
+            "x": -150,
+            "y": 350,
             "value": {
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
@@ -66,11 +14,141 @@
             "category": 5
         },
         {
-            "id": "6",
-            "name": "Node 6",
-            "symbolSize": 5,
-            "x": -400.76357,
-            "y": 300.29176,
+            "id": "r2",
+            "name": "r2",
+            "symbolSize": 10,
+            "x": -150,
+            "y": 300,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r3",
+            "name": "r3",
+            "symbolSize": 10,
+            "x": -130,
+            "y": 330,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r4",
+            "name": "r4",
+            "symbolSize": 10,
+            "x": -120,
+            "y": 340,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r5",
+            "name": "r5",
+            "symbolSize": 10,
+            "x": -80,
+            "y": 320,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r6",
+            "name": "r6",
+            "symbolSize": 10,
+            "x": -120,
+            "y": 300,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r7",
+            "name": "r7",
+            "symbolSize": 10,
+            "x": -120,
+            "y": 320,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r8",
+            "name": "r8",
+            "symbolSize": 10,
+            "x": -140,
+            "y": 320,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r9",
+            "name": "r9",
+            "symbolSize": 10,
+            "x": -140,
+            "y": 350,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r10",
+            "name": "r10",
+            "symbolSize": 10,
+            "x": -160,
+            "y": 350,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "r11",
+            "name": "r11",
+            "symbolSize": 10,
+            "x": -140,
+            "y": 370,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 8
+        },
+        {
+            "id": "l1",
+            "name": "l1",
+            "symbolSize": 10,
+            "x": -400,
+            "y": 300,
             "value": {
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
@@ -79,11 +157,11 @@
             "category": 6
         },
         {
-            "id": "7",
-            "name": "Node 7",
-            "symbolSize": 4,
-            "x": -450.76357,
-            "y": 360.29176,
+            "id": "l2",
+            "name": "l2",
+            "symbolSize": 10,
+            "x": -410,
+            "y": 310,
             "value": {
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
@@ -92,23 +170,127 @@
             "category": 7
         },
         {
-            "id": "8",
-            "name": "Node 8",
-            "symbolSize": 4,
-            "x": -150.76357,
-            "y": 300.29176,
+            "id": "l3",
+            "name": "l3",
+            "symbolSize": 10,
+            "x": -400,
+            "y": 320,
             "value": {
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
                 "type": "node"
             },
-            "category": 8
+            "category": 7
+        },
+        {
+            "id": "l4",
+            "name": "l4",
+            "symbolSize": 10,
+            "x": -410,
+            "y": 300,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
+        },
+        {
+            "id": "l5",
+            "name": "l5",
+            "symbolSize": 10,
+            "x": -390,
+            "y": 290,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
+        },
+        {
+            "id": "l6",
+            "name": "l6",
+            "symbolSize": 10,
+            "x": -380,
+            "y": 300,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
+        },
+        {
+            "id": "l7",
+            "name": "l7",
+            "symbolSize": 10,
+            "x": -380,
+            "y": 310,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
+        },
+        {
+            "id": "l10",
+            "name": "l8",
+            "symbolSize": 10,
+            "x": -410,
+            "y": 310,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
+        },
+        {
+            "id": "l11",
+            "name": "l9",
+            "symbolSize": 10,
+            "x": -410,
+            "y": 320,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
+        },
+        {
+            "id": "l12",
+            "name": "l10",
+            "symbolSize": 10,
+            "x": -390,
+            "y": 320,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
+        },
+        {
+            "id": "l13",
+            "name": "l11",
+            "symbolSize": 10,
+            "x": -390,
+            "y": 310,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 7
         }
     ],
     "links": [
         {
-            "source": "1",
-            "target": "2",
+            "source": "r1",
+            "target": "l5",
             "value": {
                 "val": [
                     5.2,
@@ -119,8 +301,8 @@
             }
         },
         {
-            "source": "2",
-            "target": "1",
+            "source": "r1",
+            "target": "l4",
             "value": {
                 "val": [
                     1,
@@ -131,8 +313,8 @@
             }
         },
         {
-            "source": "3",
-            "target": "1",
+            "source": "r2",
+            "target": "l4",
             "value": {
                 "val": [
                     2.6,
@@ -143,8 +325,8 @@
             }
         },
         {
-            "source": "1",
-            "target": "4",
+            "source": "r2",
+            "target": "12",
             "value": {
                 "val": [
                     5.2,
@@ -155,8 +337,8 @@
             }
         },
         {
-            "source": "2",
-            "target": "3",
+            "source": "r2",
+            "target": "13",
             "value": {
                 "val": [
                     2.6,
@@ -167,8 +349,8 @@
             }
         },
         {
-            "source": "7",
-            "target": "8",
+            "source": "r2",
+            "target": "l5",
             "value": {
                 "val": [
                     2.6,
@@ -179,8 +361,8 @@
             }
         },
         {
-            "source": "7",
-            "target": "5",
+            "source": "r4",
+            "target": "l5",
             "value": {
                 "val": [
                     2.6,
@@ -191,8 +373,8 @@
             }
         },
         {
-            "source": "2",
-            "target": "5",
+            "source": "r5",
+            "target": "l7",
             "value": {
                 "val": [
                     2.6,
@@ -203,8 +385,8 @@
             }
         },
         {
-            "source": "8",
-            "target": "4",
+            "source": "r3",
+            "target": "l9",
             "value": {
                 "val": [
                     2.6,
@@ -215,8 +397,8 @@
             }
         },
         {
-            "source": "8",
-            "target": "2",
+            "source": "r7",
+            "target": "l10",
             "value": {
                 "val": [
                     2.6,
@@ -227,8 +409,8 @@
             }
         },
         {
-            "source": "4",
-            "target": "7",
+            "source": "r4",
+            "target": "l7",
             "value": {
                 "val": [
                     2.6,
@@ -239,8 +421,140 @@
             }
         },
         {
-            "source": "6",
-            "target": "3",
+            "source": "r6",
+            "target": "l3",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r6",
+            "target": "l4",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r6",
+            "target": "l8",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r6",
+            "target": "l9",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r1",
+            "target": "r2",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r1",
+            "target": "r10",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r1",
+            "target": "r11",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r1",
+            "target": "r6",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r5",
+            "target": "r10",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r1",
+            "target": "r5",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r8",
+            "target": "r10",
+            "value": {
+                "val": [
+                    2.6,
+                    6.5
+                ],
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "r6",
+            "target": "r4",
             "value": {
                 "val": [
                     2.6,
