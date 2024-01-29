@@ -7,13 +7,13 @@
                     <el-row :gutter="10">
                         <el-col :span="18">
                             <div class="left-right">
-                                <span>Receiver</span>
+                                <span>Recipient</span>
                                 <el-input v-model="InputReceiver" style="width: 70%;">
                                 </el-input>
                             </div>
                         </el-col>
                         <el-col :span="6">
-                            <el-button @click="createRouteGraph" type="primary" style="width: 100%; ">Route</el-button>
+                            <el-button @click="createRouteGraph"  style="width: 100%; background-color: #9ed13a; color:#fff ">Route</el-button>
                         </el-col>
                     </el-row>
                     <br />
@@ -25,7 +25,7 @@
                             </div>
                         </el-col>
                         <el-col :span="6">
-                            <el-button type="primary" style="width: 100%; ">Direct</el-button>
+                            <el-button style="width: 100%; background-color: #5470c6; color:#fff ">Direct</el-button>
                         </el-col>
 
                     </el-row>
@@ -55,12 +55,14 @@
                     <el-row :gutter="20">
                         <el-col :span="16">
                             <div>Transfer Route</div>
-                            <div id="graph1" style="width: 80%; height: 300px;"></div>
+                            <div id="graph1" style="width: 100%; height: 300px;"></div>
                         </el-col>
 
                         <el-col :span="8">
+                            <el-button type="" style="width: 125px; position: absolute; bottom: 160px;right: 10px;">Trx
+                                Fee:<br /><br />0.07</el-button>
                             <el-button @click="send" type="primary"
-                                style="width: 100%; margin: 120px 10px;">Send</el-button>
+                                style="width: 125px; position: absolute; bottom: 10px;right: 10px;">Send</el-button>
                         </el-col>
                     </el-row>
                 </el-card>
@@ -100,13 +102,13 @@ export default {
             InputAmount: '',
             InputReceiver: 'bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n',
             LatestTrx: [
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce..." },
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce..." },
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce..." }
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1..." },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1..." }
             ],
             AmountVolume: {
-                amount: [20, 30, 24, 19, 42, 35], //数量
-                volume: [41000, 39800, 41287, 42164, 41683, 40128], //金额
+                amount: [20, 60, 45, 46, 42, 35], //数量
+                volume: [4.1, 3.8, 3.2, 3.5, 4.2, 3.9], //金额
             }
         }
     },
@@ -138,7 +140,7 @@ export default {
                 xAxis: {
                     type: 'category',
                     data: [
-                        '9:01', '9:03', '9:04', '9:06', '9:07', '9:10'
+                        '9:01', '9:03', '9:05', '9:07', '9:09', '9:11'
                     ]
                 },
                 yAxis: [{
@@ -146,8 +148,8 @@ export default {
                     max: 80
                 },
                 {
-                    type: 'value', name: 'Volume', position: 'left', min: 0,
-                    max: 80000
+                    type: 'value', name: 'Vol(x10^4)', position: 'left', min: 0,
+                    max: 4
                 }],
                 series: [
                     {
@@ -208,13 +210,13 @@ export default {
                         links: Json.links,
                         categories: Json.categories,
                         itemStyle: {
-                            normal: { color: '#007acc' }
+                            // normal: { color: '#007acc' }
                         },
                         lineStyle: {
                             opacity: 0.9,
                             width: 4,
-                            curveness: 0.3,
-                            color: '#007acc'
+                            curveness: 0,
+                            color: '#38393c'
                         }
                     }
                 ]

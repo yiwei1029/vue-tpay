@@ -28,7 +28,7 @@ const routes = [{path:'/',redirect:'/dashboard'},
         component:Channel
       },
       {
-        path:'/execute',
+        path:'/transfer',
         component: Execute
       }
 

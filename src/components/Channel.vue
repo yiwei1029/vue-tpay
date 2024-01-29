@@ -44,7 +44,7 @@
                 <el-card style="height: 388px; overflow: scroll;">
                     <div>Latest Transactions</div>
                     <el-table :data="LatestTrx" style="width: 100%">
-                        <el-table-column prop="Time" label="Time" width="">
+                        <el-table-column prop="Time" label="Time" width="100">
                         </el-table-column>
                         <el-table-column prop="TxHash" label="TxHash" width="">
                         </el-table-column>
@@ -193,7 +193,7 @@ export default {
                 legend: {
                     orient: 'horizontal',
                     y: 'bottom',
-                    left: 250,
+                    left: 175,
                     data: ['Profit', 'Amount'],
 
                 },

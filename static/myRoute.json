@@ -2,10 +2,10 @@
     "nodes": [
         {
             "id": "1",
-            "name": "Sender",
+            "name": "1",
             "symbolSize": 30,
-            "x": -200,
-            "y": 200,
+            "x": -500,
+            "y": 100,
             "value": {
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
@@ -15,10 +15,10 @@
         },
         {
             "id": "2",
-            "name": "Receiver",
+            "name": "2",
             "symbolSize": 30,
-            "x": -200,
-            "y": 300,
+            "x": -100,
+            "y": 100,
             "value": {
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
@@ -28,10 +28,36 @@
         },
         {
             "id": "3",
-            "name": "Middleman",
+            "name": "3",
             "symbolSize": 30,
-            "x": -100,
-            "y": 250,
+            "x": -300,
+            "y": 0,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 2
+        },
+        {
+            "id": "4",
+            "name": "4",
+            "symbolSize": 30,
+            "x": -400,
+            "y": 200,
+            "value": {
+                "val": 5.2,
+                "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
+                "type": "node"
+            },
+            "category": 2
+        },
+        {
+            "id": "5",
+            "name": "5",
+            "symbolSize": 30,
+            "x": -200,
+            "y": 200,
             "value": {
                 "val": 5.2,
                 "account": "bc1qmpk4zw23wlft4lqgfszmy6nh32lkqnfhtard3n",
@@ -43,6 +69,15 @@
     "links": [
         {
             "source": "1",
+            "target": "3",
+            "value": {
+                "val": 4,
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "3",
             "target": "2",
             "value": {
                 "val": 4,
@@ -52,7 +87,7 @@
         },
         {
             "source": "1",
-            "target": "3",
+            "target": "4",
             "value": {
                 "val": 3,
                 "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
@@ -60,7 +95,16 @@
             }
         },
         {
-            "source": "3",
+            "source": "4",
+            "target": "5",
+            "value": {
+                "val": 3,
+                "hash": "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2",
+                "type": "link"
+            }
+        },
+        {
+            "source": "5",
             "target": "2",
             "value": {
                 "val": 3,

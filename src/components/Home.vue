@@ -2,7 +2,7 @@
     <el-container>
         <el-header class="el-header">
             <div>
-                <img class="homelogo" src="../assets/homelogo.png" alt="">
+                <img class="homelogo" src="../assets/tlogo.png" alt="">
                 <span>ThriftPay</span>
                 <el-menu :default-active="activePath" router mode="horizontal" active-text-color="#ff73b3"
                     v-for="menu in MenuList">
@@ -32,7 +32,7 @@ export default {
             MenuList: [
                 { name: 'Dashboard', id: '1', path: 'dashboard', children: [] },
                 { name: 'Channel', id: '2', path: 'channel', children: [{ name: 'Directory', id: '2-1', path: 'directory' }] },
-                { name: 'Execute', id: '3', path: 'execute', children: [{ name: 'Dashboard', id: '3-1', path: 'dashboard' }] }
+                { name: 'Transfer', id: '3', path: 'transfer', children: [{ name: 'Dashboard', id: '3-1', path: 'dashboard' }] }
             ],
 
             activePath: '',

@@ -22,7 +22,7 @@
                     <!-- <el-card> -->
                     <el-row>
                         <el-col span="6">Trx volume<br />121</el-col>
-                        <el-col span="6">Deposit Bitcoin<br />10323421</el-col>
+                        <el-col span="6">Deposit Bitcoins<br />10323421</el-col>
                         <el-col span="6">Active PCs<br />143021</el-col>
                         <el-col span="6">Closed PCs<br />10231</el-col>
                     </el-row>
@@ -58,11 +58,11 @@
             <!-- 最近的交易 -->
             <el-col :span="5">
                 <el-card style="height: 425px; overflow: scroll;">
-                    <div>Latest Transations</div>
+                    <div>Latest Transactions</div>
                     <el-table :data="LatestTrx" style="width: 100%">
-                        <el-table-column prop="time" label="Time" width="">
+                        <el-table-column prop="time" label="Time" width="100">
                         </el-table-column>
-                        <el-table-column prop="txhash" label="Txhash" width="">
+                        <el-table-column prop="txhash" label="TxHash" width="300">
                         </el-table-column>
                     </el-table>
                 </el-card>
@@ -107,9 +107,9 @@ export default {
                 { title: "Transaction Amount", value: 1572 }
             ],
             LatestTrx: [
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c" },
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c" },
-                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c" }
+                { time: "18:46:05", txhash: "553bd34716a529cd8d9bdcee12af5635c3506065cab60d35bf274b18e8f57992" },
+                { time: "18:46:05", txhash: "81f004a7d6480ad33cca1cb3f7b76233bce5400cc990c035b0c77082260626f2" },
+                { time: "18:46:05", txhash: "60fe3b8c14f843beeaffb1b28092b491f522e7643330d5b0d711b637518aa260" }
             ],
             FreeRateDist: [
                 { name: '1-2%', value: 48 },
@@ -125,9 +125,8 @@ export default {
                 { name: '40-50%', value: 20 },
             ],
             SuccessRatio: {
-                'WareHouse-first': [0.5, 0.1, 0.3, 0.8, 0.7],
-                'Baseline-greedy': [0.2, 0.3, 0.2, 0.4, 0.3],
-                'Baseline-random': [0.1, 0.2, 0.3, 0.4, 0.5]
+                'ThriftPay': [0.6, 0.7, 0.7, 0.8, 0.8],
+                'Lightning': [0.4, 0.5, 0.5, 0.4, 0.6],
             }
 
         }
@@ -154,13 +153,12 @@ export default {
                     trigger: 'item',
                     formatter: "{a} <br/>{b}: {c} ({d}%)"
                 },
-                // legend: {
-                //     orient: 'horizontal',
-                //     x: 'bottom',
-                //     y: 'bottom',
-                //     left: 0,
-                //     data: dataArray.map(item => item.name)
-                // },
+                legend: {
+                    orient: 'vertical',
+                   top:10,
+                    left: 0,
+                    data: dataArray.map(item => item.name)
+                },
                 series: [
                     {
                         // name: 'Source',
@@ -193,7 +191,7 @@ export default {
                 legend: {
                     orient: 'horizontal',
                     y: 'bottom',
-                    left: 100,
+                    left: 200,
                     data: ['WareHouse-first', 'Baseline-greedy', 'Baseline-random']
                 },
                 xAxis: {
@@ -203,7 +201,7 @@ export default {
                 series: [
                     {
                         name: 'WareHouse-first',
-                        data: this.SuccessRatio['WareHouse-first'],
+                        data: this.SuccessRatio['ThriftPay'],
                         type: 'line',
                         // stack: 'x',
                         // areaStyle: {},
@@ -211,22 +209,14 @@ export default {
                     },
                     {
                         name: 'Baseline-greedy',
-                        data: this.SuccessRatio['Baseline-greedy'],
+                        data: this.SuccessRatio['Lightning'],
                         type: 'line',
                         // stack: 'x',
                         // areaStyle: {},   
                         smooth: 'true'
 
-                    },
-                    {
-                        name: 'Baseline-random',
-                        data: this.SuccessRatio['Baseline-random'],
-                        type: 'line',
-                        // stack: 'x',
-                        // areaStyle: {},
-                        smooth: 'true'
-
                     }
+
                 ]
             };
             chart.setOption(option)
@@ -240,8 +230,8 @@ export default {
                 // },
                 legend: {
                     orient: 'horizontal',
-                    y: 'bottom',
-                    left: 70,
+                    bottom: 0,
+                    left: 125,
                     data: ['Transasction Amount']
                 },
                 xAxis: {
