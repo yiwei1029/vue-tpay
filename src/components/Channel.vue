@@ -21,6 +21,7 @@
                         </el-col>
                         <el-col :span="4"><el-button @click="ChannelToSelect = ''" type="danger"
                                 style="width: 100%;">Close</el-button>
+                            <el-button :span="4" style="margin-left: 0; margin-top: 50px; width: 100%; background-color: #faae0b;color: #fff;">Rebalance</el-button>
                         </el-col>
                     </el-row>
                     <el-row :gutter="10">
@@ -32,8 +33,8 @@
                     <el-row :gutter="10">
                         <el-col :span="20"><el-input v-model="TxFeesToUpdate"
                                 placeholder="Input a transaction fee(%)"></el-input> </el-col>
-                        <el-col :span="4"><el-button @click="TxFees = TxFeesToUpdate + '%'" type="primary"
-                                style="width: 100%;">Update</el-button></el-col>
+                        <el-col :span="4"><el-button @click="TxFees = TxFeesToUpdate + '%'"
+                                style="width: 100%;background-color: #91cc75; color: #fff;">Update</el-button></el-col>
                     </el-row>
                 </el-card>
             </el-col>
@@ -152,7 +153,7 @@ export default {
             var chart = echarts.init(document.getElementById(divName));
             var option = {
                 title: {
-                    text: 'BalancePctage'
+                    text: 'Balance'
                 },
                 tooltip: {
                     trigger: 'item',
@@ -161,7 +162,7 @@ export default {
                 legend: {
                     orient: 'horizontal',
                     x: 'left',
-                    left: 150,
+                    left: 300,
                     data: dataArray.map(item => item.name)
                 },
                 xAxis: {
@@ -193,7 +194,7 @@ export default {
                 legend: {
                     orient: 'horizontal',
                     y: 'bottom',
-                    left: 175,
+                    left: '37%',
                     data: ['Profit', 'Amount'],
 
                 },

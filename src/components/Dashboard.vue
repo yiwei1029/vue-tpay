@@ -125,8 +125,12 @@ export default {
                 { name: '40-50%', value: 20 },
             ],
             SuccessRatio: {
-                'ThriftPay': [0.6, 0.7, 0.7, 0.8, 0.8],
-                'Lightning': [0.4, 0.5, 0.5, 0.4, 0.6],
+                // 'ThriftPay': [0.6, 0.7, 0.7, 0.8, 0.8],
+                'LN': [0.5, 0.5, 0.45, 0.4, 0.45],
+                'UG': [0.6, 0.56, 0.5, 0.48, 0.55],
+                'UR': [0.56, 0.54, 0.5, 0.42, 0.5],
+                'CG': [0.95, 0.9, 0.9, 0.87, 0.92],
+                'DC': [0.90, 0.85, 0.84, 0.80, 0.88],
             }
 
         }
@@ -155,7 +159,7 @@ export default {
                 },
                 legend: {
                     orient: 'vertical',
-                   top:10,
+                    top: 10,
                     left: 0,
                     data: dataArray.map(item => item.name)
                 },
@@ -192,7 +196,7 @@ export default {
                     orient: 'horizontal',
                     y: 'bottom',
                     left: 200,
-                    data: ['WareHouse-first', 'Baseline-greedy', 'Baseline-random']
+                    data: ['CG', 'DC', 'UG', 'UR', 'LN']
                 },
                 xAxis: {
                     data: ['9:07', '9:08', '9:09', '9:10', '9:11']
@@ -200,22 +204,48 @@ export default {
                 yAxis: {},
                 series: [
                     {
-                        name: 'WareHouse-first',
-                        data: this.SuccessRatio['ThriftPay'],
+                        name: 'CG',
+                        data: this.SuccessRatio['CG'],
                         type: 'line',
                         // stack: 'x',
                         // areaStyle: {},
                         smooth: 'true'
                     },
                     {
-                        name: 'Baseline-greedy',
-                        data: this.SuccessRatio['Lightning'],
+                        name: 'DC',
+                        data: this.SuccessRatio['DC'],
                         type: 'line',
                         // stack: 'x',
                         // areaStyle: {},   
                         smooth: 'true'
 
-                    }
+                    },
+                    {
+                        name: 'UG',
+                        data: this.SuccessRatio['UG'],
+                        type: 'line',
+                        // stack: 'x',
+                        // areaStyle: {},   
+                        smooth: 'true'
+
+                    },
+                    {
+                        name: 'UR',
+                        data: this.SuccessRatio['UR'],
+                        type: 'line',
+                        // stack: 'x',
+                        // areaStyle: {},   
+                        smooth: 'true'
+
+                    }, {
+                        name: 'LN',
+                        data: this.SuccessRatio['LN'],
+                        type: 'line',
+                        // stack: 'x',
+                        // areaStyle: {},   
+                        smooth: 'true'
+
+                    },
 
                 ]
             };

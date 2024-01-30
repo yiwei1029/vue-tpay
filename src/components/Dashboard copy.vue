@@ -119,9 +119,10 @@ export default {
                 { name: '40-50%', value: 20 },
             ],
             SuccessRatio: {
-                'WareHouse-first': [0.5, 0.1, 0.3, 0.8, 0.7],
-                'Baseline-greedy': [0.2, 0.3, 0.2, 0.4, 0.3],
-                'Baseline-random': [0.1, 0.2, 0.3, 0.4, 0.5]
+                // 'WareHouse-first': [0.5, 0.1, 0.3, 0.8, 0.7],
+                // 'Baseline-greedy': [0.2, 0.3, 0.2, 0.4, 0.3],
+                // 'Baseline-random': [0.1, 0.2, 0.3, 0.4, 0.5]
+                
             }
 
         }
